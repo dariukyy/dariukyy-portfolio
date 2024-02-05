@@ -4,9 +4,9 @@ import Container from "./Container";
 import SideBar from "./SideBar";
 import useMediaQuery from "../hooks/useMediaQuery";
 
-const StyledAppLayout = styled.div<{ sideBarWidth: string }>`
+const StyledAppLayout = styled.div<{ $sideBarWidth: number }>`
   display: grid;
-  grid-template-columns: ${(props) => props.sideBarWidth}rem 1fr;
+  grid-template-columns: ${(props) => props.$sideBarWidth}rem 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar outlet";
@@ -17,16 +17,17 @@ const StyledAppLayout = styled.div<{ sideBarWidth: string }>`
 
 const StyledSideBar = styled.aside`
   grid-area: sidebar;
-  background-color: var(--color-grey-100);
+  background-color: var(--color-grey-0);
+  border-right: 1px solid var(--color-grey-100);
   /* border: 1px solid var(--color-grey-50); */
 `;
 
 function AppLayout() {
-  const MobileMediaQuery = useMediaQuery("(max-width: 768px)");
-  const SideBarWidth = MobileMediaQuery ? "5" : "20";
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const SideBarWidth = isMobile ? 5 : 20;
 
   return (
-    <StyledAppLayout sideBarWidth={SideBarWidth}>
+    <StyledAppLayout $sideBarWidth={SideBarWidth}>
       <StyledSideBar>
         <SideBar />
       </StyledSideBar>

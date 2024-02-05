@@ -40,9 +40,17 @@ const variations = {
   primary: css`
     color: var(--color-brand-50);
     background-color: var(--color-brand-600);
+    box-shadow: var(--shadow-md);
+    transition: all 0.2s;
 
     &:hover {
       background-color: var(--color-brand-700);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+    &:active {
+      transform: translateY(2px);
+      box-shadow: var(--shadow-md);
     }
   `,
   secondary: css`

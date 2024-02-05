@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./NavIconsComponent";
 
 const StyledHeader = styled.header`
   background-color: var(--color-grey-100);

@@ -2,17 +2,19 @@ import styled from "styled-components";
 import { device } from "../utils/breakpoints";
 
 const Paragraph = styled.p`
-  font-size: 2.3rem;
-  width: 70%;
+  font-size: 2rem;
+  width: 80%;
   text-align: center;
   letter-spacing: 1.4px;
   line-height: 2;
+  color: var(--color-grey-700);
 
   @media ${device.mobile} {
-    font-size: 1.6rem;
-    width: 90%;
+    width: 85%;
     letter-spacing: 1.6px;
     line-height: 1.6;
+    padding: 0 1.6rem;
+    margin-bottom: 3rem;
   }
 
   @media ${device.tablet} {
@@ -22,7 +24,6 @@ const Paragraph = styled.p`
 
   @media ${device.smTablet} {
     width: 95%;
-    font-size: 2rem;
   }
 `;
 

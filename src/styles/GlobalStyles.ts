@@ -52,6 +52,8 @@ const GlobalStyles = createGlobalStyle`
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
 
+  --color-brand-200: #c7d2fe;
+
   --backdrop-color: rgba(255, 255, 255, 0.1);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -92,6 +94,8 @@ const GlobalStyles = createGlobalStyle`
 --color-red-700: #b91c1c;
 --color-red-800: #991b1b;
 
+--color-brand-200: #18212f;
+
 --backdrop-color: rgba(0, 0, 0, 0.3);
 
 --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -117,8 +121,19 @@ const GlobalStyles = createGlobalStyle`
   transition: background-color 0.3s, border 0.3s;
 }
 
+::selection {
+  background: var(--color-brand-500); /* Change to your preferred color */
+  color: white; /* Change to your preferred color */
+}
+
 html {
   font-size: 62.5%;
+
+  @media (max-width: 768px) {
+    font-size: 50%;
+    
+}
+
 }
 
 body {
@@ -169,6 +184,7 @@ button:has(svg) {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {

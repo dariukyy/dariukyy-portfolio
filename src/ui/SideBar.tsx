@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import MainNav from "./MainNav";
-import DarkModeToggle from "./DarkModeToggle";
+import NavIconsComponent from "./NavIconsComponent";
 
 const SideBarContainer = styled.div`
   display: flex;
@@ -15,7 +15,9 @@ function SideBar() {
   return (
     <SideBarContainer>
       <MainNav />
-      <DarkModeToggle />
+
+      {/* <SocialLinksComponent /> */}
+      <NavIconsComponent />
     </SideBarContainer>
   );
 }
