@@ -27,8 +27,8 @@ const StyledHome = styled.div`
   }
 
   & img {
-    width: 23rem;
-    height: 23rem;
+    width: 26rem;
+    height: 26rem;
     border-radius: 50%;
     box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
     border: 1px solid var(--color-grey-50);
@@ -36,8 +36,8 @@ const StyledHome = styled.div`
     transition: all 0.3s;
 
     @media ${device.mobile} {
-      width: 15rem;
-      height: 15rem;
+      width: 20rem;
+      height: 20rem;
     }
 
     &:hover {
