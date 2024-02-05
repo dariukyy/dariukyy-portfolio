@@ -11,18 +11,26 @@ const StyledHome = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
+
+  @media ${device.mobile} {
+    gap: 3.2rem;
+  }
 
   & h3 {
     color: var(--color-brand-500);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.8px;
     margin-top: 1.2rem;
+
+    @media ${device.mobile} {
+      font-size: 1.4rem;
+    }
   }
 
   & h1 {
     @media ${device.mobile} {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -54,7 +62,7 @@ function Home() {
       <h3>My name is,</h3>
       <h1>Darius Parfijanovičius</h1>
       <Paragraph>
-        I'm a fontend developer with a passion for learning and building
+        I'm a frontend developer with a passion for learning and building
         innovative solutions. I specialize with technologies like React,
         TypeScript, styled-components and TailwindCSS.
       </Paragraph>
