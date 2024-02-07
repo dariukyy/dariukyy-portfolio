@@ -25,6 +25,10 @@ const Paragraph = styled.p`
   @media ${device.smTablet} {
     width: 95%;
   }
+
+  @media (min-width: 1600px) {
+    width: 60%;
+  }
 `;
 
 export default Paragraph;

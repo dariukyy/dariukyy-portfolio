@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
+import { ReactNode } from "react";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import useMediaQuery from "../hooks/useMediaQuery";
 
-const Container = styled.main`
+const StyledContainer = styled.main`
   position: relative;
   background-color: var(--color-grey-50);
   width: 100%;
@@ -9,6 +13,12 @@ const Container = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
+  position: relative;
+
+  @media ${device.mobile} {
+    padding: 0;
+  }
 
   &::before {
     height: 100%;
@@ -39,5 +49,100 @@ const Container = styled.main`
     z-index: 1;
   }
 `;
+
+const Bubble1 = styled(motion.div)`
+  position: absolute;
+  background-color: var(--color-brand-200);
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(6.9% at 87.3% 71.9%);
+  z-index: 1;
+`;
+
+const Bubble2 = styled(motion.div)`
+  height: 100%;
+  width: 100%;
+  background: var(--color-brand-200);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(8.9% at 14.3% 36.9%);
+  z-index: 1;
+  overflow: hidden;
+
+  @media ${device.mobile} {
+    clip-path: circle(7.9% at 15.3% 36.9%);
+  }
+`;
+
+const Header = styled.div`
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  color: var(--color-brand-500);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  z-index: 2;
+  font-size: 2.5rem;
+  text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+`;
+
+type ContainerProps = {
+  children: ReactNode;
+};
+
+function Container({ children }: ContainerProps) {
+  const { pathname: path } = useLocation();
+  const isMobile = useMediaQuery(device.tablet);
+  console.log(isMobile);
+
+  const HeaderName = path.toUpperCase().replace("/", "");
+
+  const initialPositionForBubble1 = { x: 0, y: 0 };
+  // const finalPosition = { bottom: "20%", left: "-76%" };
+  const finalPositionForBubble1 = {
+    top: "18%",
+    right: "0%",
+    bottom: "20%",
+    left: "-70%",
+  };
+
+  const initialPositionForBubble2 = { x: 0, y: 0 };
+  const finalPositionForBubble2 = {
+    top: "-22%",
+    right: "0%",
+    bottom: "0%",
+    left: "18%",
+  };
+
+  return (
+    <StyledContainer>
+      {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>}
+      <Bubble1
+        initial={initialPositionForBubble1}
+        animate={
+          path === "/about"
+            ? finalPositionForBubble1
+            : initialPositionForBubble1
+        }
+        transition={{ duration: 3, type: "spring" }}
+      />
+      <Bubble2
+        initial={initialPositionForBubble2}
+        animate={
+          path === "/about"
+            ? finalPositionForBubble2
+            : initialPositionForBubble2
+        }
+        transition={{ duration: 3, type: "spring" }}
+      />
+      {children}
+    </StyledContainer>
+  );
+}
 
 export default Container;

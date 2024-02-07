@@ -24,14 +24,13 @@ const StyledSideBar = styled.aside`
 
 function AppLayout() {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const SideBarWidth = isMobile ? 5 : 20;
+  const SideBarWidth = isMobile ? 5 : 17;
 
   return (
     <StyledAppLayout $sideBarWidth={SideBarWidth}>
       <StyledSideBar>
         <SideBar />
       </StyledSideBar>
-
       <Container>
         <Outlet />
       </Container>

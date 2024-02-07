@@ -19,7 +19,7 @@ const StyledNavLink = styled(NavLink)`
     transition: all 0.3s;
 
     @media (max-width: 768px) {
-      padding: 1.4rem; // Change this line
+      padding: 1rem;
     }
   }
 
@@ -29,11 +29,11 @@ const StyledNavLink = styled(NavLink)`
   &.active:link,
   &.active:visited {
     color: var(--color-grey-800);
-    background-color: var(--color-grey-50);
+    background-color: var(--color-brand-100);
     border-radius: var(--border-radius-sm);
 
     @media (max-width: 768px) {
-      border-radius: 0;
+      border-radius: var(--border-radius-sm);
     }
   }
 
@@ -48,7 +48,7 @@ const StyledNavLink = styled(NavLink)`
   &:active svg,
   &.active:link svg,
   &.active:visited svg {
-    color: var(--color-brand-600);
+    color: var(--color-brand-700);
   }
 `;
 

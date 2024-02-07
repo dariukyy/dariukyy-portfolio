@@ -13,18 +13,18 @@ const ButtonIcon = styled.button`
   transition: all 0.2s;
 
   @media (max-width: 768px) {
-    padding: 1.4rem;
-    border-radius: 0%;
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
   }
 
   &:hover {
-    background-color: var(--color-grey-50);
+    background-color: var(--color-brand-100);
   }
 
   & svg {
     width: 2.2rem;
     height: 2.2rem;
-    color: var(--color-brand-600);
+    color: var(--color-brand-700);
   }
 `;
 

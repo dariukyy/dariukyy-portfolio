@@ -8,7 +8,7 @@ import styled from "styled-components";
 import NavItem from "./NavItem";
 
 const NavList = styled.ul`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

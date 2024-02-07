@@ -15,8 +15,6 @@ function SideBar() {
   return (
     <SideBarContainer>
       <MainNav />
-
-      {/* <SocialLinksComponent /> */}
       <NavIconsComponent />
     </SideBarContainer>
   );
