@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Container from "./Container";
-import SideBar from "./SideBar";
+import SideBar from "../scenes/nav/SideBar";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const StyledAppLayout = styled.div<{ $sideBarWidth: number }>`

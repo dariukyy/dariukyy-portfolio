@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 

@@ -11,6 +11,7 @@ type ButtonProps = {
   to?: string;
   children: ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 const sizes = {
@@ -30,10 +31,11 @@ const sizes = {
     padding: none;
   `,
   large: css`
-    font-size: 1.6rem;
-    padding: 1.2rem 2.4rem;
+    font-size: 1.2rem;
+    padding: 1.3rem 2.5rem;
     font-weight: 500;
     border-radius: 60px;
+    width: 14rem;
   `,
 };
 

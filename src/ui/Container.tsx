@@ -3,7 +3,9 @@ import { device } from "../utils/breakpoints";
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import useMediaQuery from "../hooks/useMediaQuery";
+// import useMediaQuery from "../hooks/useMediaQuery";
+import { Toaster } from "react-hot-toast";
+import useSidebarWidth from "../hooks/useSideBarWidth";
 
 const StyledContainer = styled.main`
   position: relative;
@@ -79,28 +81,28 @@ const Bubble2 = styled(motion.div)`
   }
 `;
 
-const Header = styled.div`
-  position: absolute;
-  top: 20%;
-  left: 12%;
-  color: var(--color-brand-500);
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  z-index: 2;
-  font-size: 2.5rem;
-  text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
-`;
+// const Header = styled.div`
+//   position: absolute;
+//   top: 20%;
+//   left: 12%;
+//   color: var(--color-brand-500);
+//   font-weight: 700;
+//   letter-spacing: 0.8px;
+//   z-index: 2;
+//   font-size: 2.5rem;
+//   text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+// `;
 
 type ContainerProps = {
   children: ReactNode;
 };
 
 function Container({ children }: ContainerProps) {
+  const sideBarWidth = useSidebarWidth();
   const { pathname: path } = useLocation();
-  const isMobile = useMediaQuery(device.tablet);
-  console.log(isMobile);
+  // const isMobile = useMediaQuery(device.tablet);
 
-  const HeaderName = path.toUpperCase().replace("/", "");
+  // const HeaderName = path.toUpperCase().replace("/", "");
 
   const initialPositionForBubbles = { x: 0, y: 0 };
 
@@ -137,10 +139,10 @@ function Container({ children }: ContainerProps) {
       };
     }
   }
-  // 5% 0% 20% -60%;
+
   return (
     <StyledContainer>
-      {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>}
+      {/* {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>} */}
       <Bubble1
         initial={initialPositionForBubbles}
         animate={getFinalPositions(path)?.finalPositionForBubble1}
@@ -152,6 +154,28 @@ function Container({ children }: ContainerProps) {
         transition={{ duration: 3, type: "spring" }}
       />
       {children}
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{
+          marginLeft: sideBarWidth,
+        }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "16px 24px",
+            backgroundColor: "var(--color-grey-0)",
+            color: "var(--color-grey-700)",
+          },
+        }}
+      />
     </StyledContainer>
   );
 }

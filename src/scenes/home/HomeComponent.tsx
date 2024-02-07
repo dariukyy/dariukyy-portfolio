@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import MyPhoto from "../assets/my-photo.jpeg";
-import Button from "../ui/Button";
-import { device } from "../utils/breakpoints";
-import Paragraph from "../ui/Paragraph";
+import MyPhoto from "../../assets/my-photo.jpeg";
+import Button from "../../ui/Button";
+import { device } from "../../utils/breakpoints";
+import Paragraph from "../../ui/Paragraph";
 import { motion } from "framer-motion";
-import BrandHeader from "./BrandHeader";
+import BrandHeader from "../../ui/BrandHeader";
 
 const StyledHome = styled.div`
   display: flex;

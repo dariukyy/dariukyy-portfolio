@@ -1,10 +1,10 @@
 import { type ReactNode } from "react";
 import styled, { css } from "styled-components";
-import { type AboutItem } from "../data/about";
-import { device } from "../utils/breakpoints";
+import { type AboutItem } from "../../data/about";
+import { device } from "../../utils/breakpoints";
 
 type StyledOptionProps = {
-  activeClass: boolean;
+  $activeClass: boolean;
 };
 
 const StyledOption = styled.button<StyledOptionProps>`
@@ -26,7 +26,7 @@ const StyledOption = styled.button<StyledOptionProps>`
   }
 
   ${(props) =>
-    props.activeClass &&
+    props.$activeClass &&
     css`
       background-color: var(--color-brand-500);
       color: var(--color-grey-0);
@@ -41,10 +41,9 @@ type OptionProps = {
 };
 
 function Option({ children, active, onClick, item }: OptionProps) {
-  console.log(active, item.id);
   const activeClass = active === item.id;
   return (
-    <StyledOption activeClass={activeClass} onClick={onClick}>
+    <StyledOption $activeClass={activeClass} onClick={onClick}>
       {children}
     </StyledOption>
   );

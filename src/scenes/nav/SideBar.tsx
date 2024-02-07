@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import MainNav from "./MainNav";
-import NavIconsComponent from "./NavIconsComponent";
+import NavIconsComponent from "../../ui/NavIconsComponent";
 
 const SideBarContainer = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const SideBarContainer = styled.div`
 
 function SideBar() {
   return (
-    <SideBarContainer>
+    <SideBarContainer id="sidebar">
       <MainNav />
       <NavIconsComponent />
     </SideBarContainer>
