@@ -91,7 +91,7 @@ const GlobalStyles = createGlobalStyle`
 --color-indigo-700: #e0e7ff;
 
 --color-red-100: #fee2e2;
---color-red-700: #b91c1c;
+--color-red-700: #922724;
 --color-red-800: #991b1b;
 
 --color-brand-200: #18212f;
@@ -175,13 +175,16 @@ input:disabled {
   color: var(--color-grey-500);
 }
 
-input:focus,
+/* input:focus,
 button:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--color-brand-600);
   outline-offset: -1px;
-}
+} */
+
+
+
 
 /* Parent selector, finally 😃 */
 button:has(svg) {

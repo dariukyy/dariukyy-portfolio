@@ -102,42 +102,53 @@ function Container({ children }: ContainerProps) {
 
   const HeaderName = path.toUpperCase().replace("/", "");
 
-  const initialPositionForBubble1 = { x: 0, y: 0 };
-  // const finalPosition = { bottom: "20%", left: "-76%" };
-  const finalPositionForBubble1 = {
-    top: "18%",
-    right: "0%",
-    bottom: "20%",
-    left: "-70%",
-  };
+  const initialPositionForBubbles = { x: 0, y: 0 };
 
-  const initialPositionForBubble2 = { x: 0, y: 0 };
-  const finalPositionForBubble2 = {
-    top: "-22%",
-    right: "0%",
-    bottom: "0%",
-    left: "18%",
-  };
-
+  function getFinalPositions(path: string) {
+    if (path === "/about") {
+      return {
+        finalPositionForBubble1: {
+          top: "18%",
+          right: "0%",
+          bottom: "20%",
+          left: "-70%",
+        },
+        finalPositionForBubble2: {
+          top: "-22%",
+          right: "0%",
+          bottom: "0%",
+          left: "18%",
+        },
+      };
+    } else if (path === "/contact") {
+      return {
+        finalPositionForBubble1: {
+          top: "16%",
+          right: "0%",
+          bottom: "20%",
+          left: "-73%",
+        },
+        finalPositionForBubble2: {
+          top: "-26%",
+          right: "0%",
+          bottom: "0%",
+          left: "10%",
+        },
+      };
+    }
+  }
+  // 5% 0% 20% -60%;
   return (
     <StyledContainer>
       {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>}
       <Bubble1
-        initial={initialPositionForBubble1}
-        animate={
-          path === "/about"
-            ? finalPositionForBubble1
-            : initialPositionForBubble1
-        }
+        initial={initialPositionForBubbles}
+        animate={getFinalPositions(path)?.finalPositionForBubble1}
         transition={{ duration: 3, type: "spring" }}
       />
       <Bubble2
-        initial={initialPositionForBubble2}
-        animate={
-          path === "/about"
-            ? finalPositionForBubble2
-            : initialPositionForBubble2
-        }
+        initial={initialPositionForBubbles}
+        animate={getFinalPositions(path)?.finalPositionForBubble2}
         transition={{ duration: 3, type: "spring" }}
       />
       {children}

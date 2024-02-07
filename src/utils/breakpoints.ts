@@ -6,7 +6,7 @@ type BreakpointValues = {
 
 export const breakpoints: BreakpointValues = {
   mobile: "480px",
-  tablet: "768px",
+  tablet: "769px",
   desktop: "1024px",
   smTablet: "600px",
 };

@@ -5,12 +5,13 @@ import styled, { css } from "styled-components";
 type Size = "small" | "medium" | "empty" | "large";
 type Variation = "primary" | "secondary" | "danger" | "empty";
 
-interface ButtonProps {
+type ButtonProps = {
   size?: Size;
   variation?: Variation;
   to?: string;
   children: ReactNode;
-}
+  onClick?: () => void;
+};
 
 const sizes = {
   small: css`
@@ -81,6 +82,7 @@ const ButtonEl = styled.button<ButtonProps>`
   border: none;
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
+  -webkit-tap-highlight-color: transparent;
 
   ${(props) => sizes[props.size || "medium"]}
   ${(props) => variations[props.variation || "primary"]}

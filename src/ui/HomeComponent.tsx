@@ -70,9 +70,19 @@ function HomeComponent() {
         innovative solutions. I specialize with technologies like React, Redux,
         TypeScript, styled-components and TailwindCSS.
       </Paragraph>
-      <Button to="/contact" size="large">
-        Get in touch
-      </Button>
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.1 }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 0.7,
+        }}
+      >
+        <Button to="/contact" size="large">
+          Get in touch
+        </Button>
+      </motion.div>
     </StyledHome>
   );
 }

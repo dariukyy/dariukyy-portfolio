@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Option from "../ui/Option";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { device } from "../utils/breakpoints";
-import { aboutData } from "../data/about";
+import { AboutItem, aboutData } from "../data/about";
 import { motion } from "framer-motion";
 
 const StyledAbout = styled.div`
@@ -13,23 +13,23 @@ const StyledAbout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3.5rem;
+  gap: 2.4rem;
 `;
 
 const Box = styled.div`
   background-color: var(--color-grey-100);
-  border: 1px solid var(--color-grey-100);
+  border: 1px solid var(--color-grey-200);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-lg);
   padding: 2.4rem 3.2rem 3.2rem;
-  max-width: 115rem;
+  max-width: 60rem;
   height: auto;
   letter-spacing: 0.9px;
   line-height: 2;
   font-weight: 500;
-  display: flex; /* Added */
-  flex-direction: column; /* Added */
-  justify-content: space-between; /* Added */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
   overflow: hidden;
@@ -64,7 +64,6 @@ const OptionsContainer = styled.ul`
   padding: 0.8rem;
   display: flex;
   gap: 3rem;
-
   justify-content: space-around;
 
   @media ${device.mobile} {
@@ -73,31 +72,52 @@ const OptionsContainer = styled.ul`
   }
 `;
 
+type MotionDivProps = {
+  children: ReactNode;
+};
+
+const MotionDiv = ({ children }: MotionDivProps) => (
+  <motion.div
+    initial={{ opacity: 0, x: 300 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.3 }}
+  >
+    {children}
+  </motion.div>
+);
+
+type OptionItemProps = {
+  active: number;
+  setActive: (id: number) => void;
+  item: AboutItem;
+};
+
+const OptionItem = ({ item, active, setActive }: OptionItemProps) => (
+  <li>
+    <Option
+      onClick={() => setActive(item.id)}
+      active={active}
+      key={item.id}
+      item={item}
+    >
+      {item.option}
+    </Option>
+  </li>
+);
+
 function About() {
   const [active, setActive] = useState(aboutData[0].id);
   const activeItem = aboutData.find((item) => item.id === active);
+
   return (
     <StyledAbout>
-      <motion.div
-        initial={{ opacity: 0, x: 300 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3 }}
-      >
+      <MotionDiv>
         <OptionsContainer>
           {aboutData.map((item) => (
-            <li>
-              <Option
-                onClick={() => setActive(item.id)}
-                active={active}
-                key={item.id}
-                item={item}
-              >
-                {item.option}
-              </Option>
-            </li>
+            <OptionItem item={item} active={active} setActive={setActive} />
           ))}
         </OptionsContainer>
-      </motion.div>
+      </MotionDiv>
       <Box>{activeItem?.description}</Box>
     </StyledAbout>
   );
