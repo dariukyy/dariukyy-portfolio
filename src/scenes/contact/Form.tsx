@@ -13,9 +13,13 @@ const Form = styled.form`
   align-items: center;
   gap: 3rem;
   border-radius: var(--border-radius-lg);
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   border: 1px solid var(--color-grey-200);
   box-shadow: var(--shadow-lg);
+
+  @media ${device.mobile} {
+    padding: 1rem 0.1rem;
+  }
 `;
 
 const FormGroup = styled.div`
@@ -33,8 +37,8 @@ const FormHeader = styled(motion.h1)`
   text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
 
   @media ${device.mobile} {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    /* margin-bottom: 1rem; */
   }
 `;
 

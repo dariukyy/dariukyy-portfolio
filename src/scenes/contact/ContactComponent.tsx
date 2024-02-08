@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 // Local imports
 import { Form, FormGroup, FormHeader } from "./Form";
 import { ErrorMessage, Input } from "./Input";
-import TextArea from "../../ui/TextArea";
+import TextArea from "./TextArea";
 import { capitalizeFirstLetter } from "../../helpers/capitalizeFirstLetter";
 import SpinnerMini from "../../ui/SpinnerMini";
 import Button from "../../ui/Button";
@@ -26,6 +26,7 @@ const StyledContact = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+  padding: 0 2rem;
 `;
 
 // Types
@@ -34,6 +35,18 @@ type FormData = {
   email: string;
   message: string;
 };
+
+declare global {
+  interface ImportMetaEnv {
+    VITE_APP_SERVICE_KEY: string;
+    VITE_APP_TEMPLATE_ID: string;
+    VITE_APP_PUBLIC_KEY: string;
+  }
+}
+
+const SERVICE_KEY = import.meta.env.VITE_APP_SERVICE_KEY;
+const TEMPLATE_ID = import.meta.env.VITE_APP_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_APP_PUBLIC_KEY;
 
 // Component
 function ContactComponent() {
@@ -50,8 +63,8 @@ function ContactComponent() {
     setIsLoading(true);
     if (form.current) {
       emailjs
-        .sendForm("service_o07lpbf", "template_j5nbhkr", form.current, {
-          publicKey: "Bg2WWCmowlwJ7ObO7",
+        .sendForm(SERVICE_KEY, TEMPLATE_ID, form.current, {
+          publicKey: PUBLIC_KEY,
         })
         .then(
           () => {
@@ -69,6 +82,17 @@ function ContactComponent() {
     }
   }
 
+  const shakeAnimation = {
+    rest: {
+      x: 0,
+      transition: { type: "spring", stiffness: 1000, damping: 20 },
+    },
+    shake: {
+      x: [-10, 10, -10, 10, -10, 10, -10, 10, -10, 10, 0],
+      transition: { type: "spring", stiffness: 1000, damping: 20 },
+    },
+  };
+
   return (
     <StyledContact>
       <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
@@ -81,14 +105,20 @@ function ContactComponent() {
           <br /> Send me message
         </FormHeader>
         <FormGroup>
-          <Input
-            type="text"
-            placeholder="Name"
-            id="name"
-            disabled={isLoading}
-            {...register("name", { required: true, maxLength: 100 })}
-            $hasError={!!errors.name}
-          />
+          <motion.div
+            variants={shakeAnimation}
+            initial="rest"
+            animate={errors.name ? "shake" : "rest"}
+          >
+            <Input
+              type="text"
+              placeholder="Name"
+              id="name"
+              disabled={isLoading}
+              {...register("name", { required: true, maxLength: 100 })}
+              $hasError={!!errors.name}
+            />
+          </motion.div>
           {errors.name && (
             <ErrorMessage>
               {errors.name?.type === "required"
@@ -98,17 +128,23 @@ function ContactComponent() {
           )}
         </FormGroup>
         <FormGroup>
-          <Input
-            type="text"
-            placeholder="Email"
-            id="email"
-            disabled={isLoading}
-            {...register("email", {
-              required: true,
-              pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-            })}
-            $hasError={!!errors.email}
-          />
+          <motion.div
+            variants={shakeAnimation}
+            initial="rest"
+            animate={errors.email ? "shake" : "rest"}
+          >
+            <Input
+              type="text"
+              placeholder="Email"
+              id="email"
+              disabled={isLoading}
+              {...register("email", {
+                required: true,
+                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+              })}
+              $hasError={!!errors.email}
+            />
+          </motion.div>
           {errors.email && (
             <ErrorMessage>
               {errors.email?.type === "required"
@@ -118,14 +154,20 @@ function ContactComponent() {
           )}
         </FormGroup>
         <FormGroup>
-          <TextArea
-            rows={6}
-            placeholder="Message"
-            id="message"
-            disabled={isLoading}
-            {...register("message", { required: true, maxLength: 100 })}
-            $hasError={!!errors.message}
-          />
+          <motion.div
+            variants={shakeAnimation}
+            initial="rest"
+            animate={errors.message ? "shake" : "rest"}
+          >
+            <TextArea
+              rows={4}
+              placeholder="Message"
+              id="message"
+              disabled={isLoading}
+              {...register("message", { required: true, maxLength: 100 })}
+              $hasError={!!errors.message}
+            />
+          </motion.div>
           {errors.message && (
             <ErrorMessage>
               {errors.message?.type === "required"

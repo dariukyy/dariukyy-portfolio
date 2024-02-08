@@ -1,9 +1,11 @@
-import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
-import { useDarkMode } from "../context/DarkModeContext";
-
+import { HiDownload } from "react-icons/hi";
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiGithubLogo } from "react-icons/pi";
+import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
+
+import { useDarkMode } from "../context/DarkModeContext";
 import ButtonIconComponent from "./ButtonIcon";
+import PDF_URL from "../assets/my-pdf.pdf";
 
 declare global {
   interface ImportMetaEnv {
@@ -20,6 +22,9 @@ function NavIconsComponent() {
 
   return (
     <>
+      <ButtonIconComponent href={PDF_URL} download>
+        <HiDownload />
+      </ButtonIconComponent>
       <ButtonIconComponent href={GITHUB_URL}>
         <PiGithubLogo />
       </ButtonIconComponent>

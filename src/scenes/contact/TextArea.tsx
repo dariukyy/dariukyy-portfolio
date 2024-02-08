@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../utils/breakpoints";
+import { device } from "../../utils/breakpoints";
 
 const TextArea = styled.textarea<{ $hasError?: boolean }>`
   font-size: 1.5rem;
@@ -15,15 +15,16 @@ const TextArea = styled.textarea<{ $hasError?: boolean }>`
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius-sm);
   resize: vertical;
+  transition: none;
 
   @media ${device.mobile} {
     min-height: 5rem;
   }
 
   &:focus {
-    outline: ${(props) =>
-      !props.$hasError && "2px solid var(--color-brand-600)"};
+    outline: 2px solid var(--color-brand-600);
     outline-offset: -1px;
+    border: 2px solid var(--color-grey-300);
   }
 
   &::placeholder {

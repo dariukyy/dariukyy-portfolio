@@ -14,6 +14,7 @@ const Input = styled.input<{ $hasError?: boolean }>`
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius-sm);
   letter-spacing: 1.1px;
+  transition: none;
 
   &::placeholder {
     color: var(--color-grey-400);
@@ -24,9 +25,9 @@ const Input = styled.input<{ $hasError?: boolean }>`
   }
 
   &:focus {
-    outline: ${(props) =>
-      !props.$hasError && "2px solid var(--color-brand-600)"};
+    outline: 2px solid var(--color-brand-600);
     outline-offset: -1px;
+    border: 2px solid var(--color-grey-300);
   }
 `;
 
