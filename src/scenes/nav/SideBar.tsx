@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import MainNav from "./MainNav";
-import NavIconsComponent from "../../ui/NavIconsComponent";
+import NavIconsComponent from "./NavIconsComponent";
 
-const SideBarContainer = styled.div`
+const StyledSideBarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -13,10 +13,10 @@ const SideBarContainer = styled.div`
 
 function SideBar() {
   return (
-    <SideBarContainer id="sidebar">
+    <StyledSideBarContainer id="sidebar">
       <MainNav />
       <NavIconsComponent />
-    </SideBarContainer>
+    </StyledSideBarContainer>
   );
 }
 

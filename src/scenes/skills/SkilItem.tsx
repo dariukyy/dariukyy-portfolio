@@ -1,25 +1,6 @@
-import styled from "styled-components";
 import { SkillProp } from "../../data/skills";
 import { motion } from "framer-motion";
-
-const StyledSkillItem = styled(motion.li)`
-  background-color: var(--color-grey-100);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-md);
-  border: 2px solid var(--color-grey-300);
-  padding: 1rem 1.2rem;
-  font-size: 1.4rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-
-  & svg {
-    width: 2.1rem;
-    height: 2.1rem;
-  }
-`;
+import StyledSkillItem from "./styled-components/StyledSkillItem";
 
 function SkillItem({ skill }: { skill: SkillProp }) {
   const fadeInAnimationVariants = {

@@ -1,40 +1,14 @@
 import { LiaLinkedinIn } from "react-icons/lia";
 import { PiGithubLogo } from "react-icons/pi";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
-
-import { useDarkMode } from "../context/DarkModeContext";
-import ButtonIconComponent from "./ButtonIcon";
-import PDF_EN_URL from "../assets/Darius-Parfijanovičius-cv-en.pdf";
-import PDF_LT_URL from "../assets/Darius-Parfijanovičius-CV-LT.pdf";
-import Menus from "./Menus";
-import styled from "styled-components";
 import { FaRegFilePdf } from "react-icons/fa";
-
-const StyledNavIcons = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-`;
-
-const MenusIconAndText = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem 2.8rem;
-
-  &:hover {
-    background-color: var(--color-brand-100);
-  }
-
-  & svg {
-    width: 2rem;
-    height: 2rem;
-    color: var(--color-brand-700);
-  }
-`;
+import { useDarkMode } from "../../context/DarkModeContext";
+import Menus from "../../ui/Menus";
+import ButtonIconComponent from "../../ui/ButtonIcon";
+import PDF_EN_URL from "../../assets/Darius-Parfijanovičius-CV-EN.pdf";
+import PDF_LT_URL from "../../assets/Darius-Parfijanovičius-CV-LT.pdf";
+import MenusIconAndText from "./styled-components/MenusIconAndText";
+import StyledNavIcons from "./styled-components/StyledNavIcons";
 
 declare global {
   interface ImportMetaEnv {
