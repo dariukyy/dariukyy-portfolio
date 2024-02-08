@@ -15,7 +15,7 @@ const ButtonIcon = styled.button<{ openId: string }>`
   background: none;
   border: none;
   padding: 1.2rem 2.4rem;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   transition: all 0.2s;
   ${(props) =>
     props.openId === ""
@@ -23,7 +23,7 @@ const ButtonIcon = styled.button<{ openId: string }>`
       : "background-color: var(--color-brand-100);"}
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 1.1rem;
     border-radius: var(--border-radius-sm);
   }
 
@@ -149,7 +149,7 @@ function Toggle({ id }: ToggleProps) {
     setPosition({
       x: !isMobile
         ? window.innerWidth - rect.width - 4 * rect.x
-        : window.innerWidth - rect.width - 4 * rect.x - 110,
+        : window.innerWidth - rect.width - 4 * rect.x - 115,
       y: rect.y + rect.height,
     });
 

@@ -197,6 +197,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 ul {
   list-style: none;
 }

@@ -1,5 +1,7 @@
+import SkillsComponent from "../scenes/skills/SkillsComponent";
+
 function Skills() {
-  return <div>Hey</div>;
+  return <SkillsComponent />;
 }
 
 export default Skills;

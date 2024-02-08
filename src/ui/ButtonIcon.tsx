@@ -6,14 +6,17 @@ import {
 import styled from "styled-components";
 
 const ButtonIcon = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   padding: 1.2rem 2.4rem;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--border-radius-md);
   transition: all 0.2s;
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 1.1rem;
     border-radius: var(--border-radius-sm);
   }
 

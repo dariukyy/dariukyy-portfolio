@@ -6,14 +6,13 @@ import Paragraph from "../../ui/Paragraph";
 import { motion } from "framer-motion";
 import BrandHeader from "../../ui/BrandHeader";
 
-const StyledHome = styled.div`
+const StyledHome = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center; // Changed from flex-start to space-around
   align-items: center;
-  height: 100%;
-  width: 100%;
-  gap: 3.7rem;
+
+  gap: 2.8rem;
   z-index: 4;
 
   @media ${device.mobile} {

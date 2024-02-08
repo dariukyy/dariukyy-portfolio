@@ -5,7 +5,7 @@ import Option from "./Option";
 import { AboutItem, aboutData } from "../../data/about";
 import { device } from "../../utils/breakpoints";
 
-const StyledAbout = styled.div`
+const StyledAbout = styled.section`
   width: 80%;
   height: 100%;
   z-index: 2;

@@ -17,7 +17,7 @@ import SpinnerMini from "../../ui/SpinnerMini";
 import Button from "../../ui/Button";
 
 // Styled components
-const StyledContact = styled.div`
+const StyledContact = styled.section`
   width: 90%;
   height: 30%;
   z-index: 2;

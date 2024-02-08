@@ -137,9 +137,25 @@ function Container({ children }: ContainerProps) {
           left: "10%",
         },
       };
+    } else if (path === "/skills") {
+      return {
+        finalPositionForBubble1: {
+          top: "8%",
+          right: "0%",
+          bottom: "20%",
+          left: "-46%",
+        },
+        finalPositionForBubble2: {
+          top: "-20%",
+          right: "0%",
+          bottom: "0%",
+          left: "31%",
+        },
+      };
     }
   }
-
+  // -20% 0% 0% 31
+  // 18% 0% 20% -70%
   return (
     <StyledContainer>
       {/* {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>} */}

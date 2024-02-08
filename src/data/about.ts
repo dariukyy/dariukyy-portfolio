@@ -10,7 +10,7 @@ export const aboutData: AboutDataProps = [
   {
     id: 1,
     option: "About me",
-    description: `Hello! My name is Darius, I am a self-taught frontend developer. I am committed to continuous learning and growth. Moving on from my previous job, I decided to focus all my energy on programming to deepen my understanding of the field and further develop my technical skills.  I believe that continuous improvement is the key to success, so I invest not only time but also passion and effort into my self-development`,
+    description: `Hello! My name is Darius, I am a self-taught frontend developer. I am committed to continuous learning and growth. Moving on from my previous job, I decided to focus all my energy on programming to deepen my understanding of the field and further develop my technical skills.  I believe that continuous improvement is the key to success, so I invest not only time but also passion and effort into my self-development.`,
   },
   {
     id: 2,

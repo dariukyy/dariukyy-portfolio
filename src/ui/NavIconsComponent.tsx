@@ -10,11 +10,13 @@ import Menus from "./Menus";
 import styled from "styled-components";
 import { FaRegFilePdf } from "react-icons/fa";
 
-// const ModalComponent = styled.div`
-//   width: 30%;
-//   height: 30%;
-//   background-color: var(--color-grey-0);
-// `;
+const StyledNavIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+`;
 
 const MenusIconAndText = styled.a`
   display: flex;
@@ -48,7 +50,7 @@ function NavIconsComponent() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <>
+    <StyledNavIcons>
       <Menus>
         <Menus.Toggle id="toggleId" />
         <Menus.List id="toggleId">
@@ -76,7 +78,7 @@ function NavIconsComponent() {
       <ButtonIconComponent onClick={toggleDarkMode}>
         {!isDarkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
       </ButtonIconComponent>
-    </>
+    </StyledNavIcons>
   );
 }
 
