@@ -35,7 +35,7 @@ function MainNav() {
     <NavList>
       {navLinks.map((link) => (
         <motion.li
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "auto" }}
           initial={fadeInAnimationVariants.initial}
           animate={fadeInAnimationVariants.animate(link.id)}
           custom={link.id}
