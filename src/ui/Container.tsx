@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Toaster } from "react-hot-toast";
 import useSidebarWidth from "../hooks/useSideBarWidth";
 
-const StyledContainer = styled.main`
+const StyledContainer = styled.main<{ isProjectSection: boolean }>`
   position: relative;
   background-color: var(--color-grey-50);
   width: 100%;
@@ -18,7 +18,13 @@ const StyledContainer = styled.main`
   padding: 1.5rem;
   position: relative;
 
-  @media ${device.mobile} {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  */ @media ${device.mobile} {
     padding: 0;
   }
 
@@ -100,6 +106,8 @@ type ContainerProps = {
 function Container({ children }: ContainerProps) {
   const sideBarWidth = useSidebarWidth();
   const { pathname: path } = useLocation();
+
+  const isProjectSection = path === "/projects";
   // const isMobile = useMediaQuery(device.tablet);
 
   // const HeaderName = path.toUpperCase().replace("/", "");
@@ -157,7 +165,7 @@ function Container({ children }: ContainerProps) {
   // -20% 0% 0% 31
   // 18% 0% 20% -70%
   return (
-    <StyledContainer>
+    <StyledContainer isProjectSection={isProjectSection}>
       {/* {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>} */}
       <Bubble1
         initial={initialPositionForBubbles}

@@ -20,6 +20,7 @@ export type SkillProp = {
   icon: IconType;
   color?: string;
   fill?: string;
+  transition?: string;
 };
 
 type SkillsProps = SkillProp[];
@@ -48,6 +49,7 @@ export const skills: SkillsProps = [
     icon: SiCssmodules,
     id: 14,
     fill: "var(--color-grey-900)",
+    transition: "all 0.3s",
   },
   {
     skill: "Styled Components",

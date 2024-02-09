@@ -4,6 +4,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import StyledNavLink from "./styled-components/StyledNavLink";
 
 interface NavItemProps {
+  id: number;
   to: string;
   icon: IconType;
   label: string;

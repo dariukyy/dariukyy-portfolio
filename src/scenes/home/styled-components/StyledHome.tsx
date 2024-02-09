@@ -25,8 +25,8 @@ const StyledHome = styled.section`
   }
 
   & img {
-    width: 24rem;
-    height: 24rem;
+    width: 22rem;
+    height: 22rem;
     border-radius: 50%;
     box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
     border: 1px solid var(--color-grey-50);

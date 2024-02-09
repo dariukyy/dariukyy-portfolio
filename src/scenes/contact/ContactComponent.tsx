@@ -21,12 +21,12 @@ const StyledContact = styled.section`
   width: 90%;
   height: 30%;
   z-index: 2;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
-  padding: 0 2rem;
 `;
 
 // Types
@@ -101,8 +101,7 @@ function ContactComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          Have some questions?
-          <br /> Send me message
+          Let's Collaborate!
         </FormHeader>
         <FormGroup>
           <motion.div

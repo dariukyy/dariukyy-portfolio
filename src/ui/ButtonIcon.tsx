@@ -5,13 +5,15 @@ import {
 } from "react";
 import styled from "styled-components";
 
-const ButtonIcon = styled.button`
+const ButtonIcon = styled.button<{ projectStyle: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
   background: none;
   border: none;
-  padding: 1.2rem 2.4rem;
+  ${(props) =>
+    props.projectStyle ? "padding: 0.5rem;" : " padding: 1.2rem 2.4rem;"}
+
   border-radius: var(--border-radius-md);
   transition: all 0.2s;
 
@@ -27,7 +29,10 @@ const ButtonIcon = styled.button`
   & svg {
     width: 2.2rem;
     height: 2.2rem;
-    color: var(--color-brand-700);
+    ${(props) =>
+      props.projectStyle
+        ? "color: var(--color-brand-500);"
+        : "color: var(--color-brand-600);"}
   }
 `;
 
@@ -37,6 +42,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
+  projectStyle?: boolean;
 };
 
 type ButtonIconProps = { href?: string } & (ButtonProps | AnchorProps);
@@ -45,13 +51,23 @@ const ButtonIconComponent = (props: ButtonIconProps) => {
   if ("href" in props) {
     const { href, children, ...rest } = props as AnchorProps;
     return (
-      <ButtonIcon as="a" href={href} target="_blank" {...rest}>
+      <ButtonIcon
+        as="a"
+        projectStyle={rest.projectStyle || false}
+        href={href}
+        target="_blank"
+        {...rest}
+      >
         {children}
       </ButtonIcon>
     );
   } else {
     const { children, ...rest } = props as ButtonProps;
-    return <ButtonIcon {...rest}>{children}</ButtonIcon>;
+    return (
+      <ButtonIcon projectStyle {...rest}>
+        {children}
+      </ButtonIcon>
+    );
   }
 };
 

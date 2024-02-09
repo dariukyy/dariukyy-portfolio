@@ -29,6 +29,7 @@ const FormGroup = styled.div`
 `;
 
 const FormHeader = styled(motion.h1)`
+  margin-top: 1rem;
   font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: 1.1px;

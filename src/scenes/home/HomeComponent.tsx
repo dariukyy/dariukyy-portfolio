@@ -22,12 +22,11 @@ function HomeComponent() {
         src={MyPhoto}
       />
       <BrandHeader>My name is,</BrandHeader>
-
       <h1>{NAME}</h1>
       <Paragraph>{DESCRIPTION}</Paragraph>
       <motion.div
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1.25 }}
         transition={{
           repeat: Infinity,
           repeatType: "reverse",
@@ -35,7 +34,7 @@ function HomeComponent() {
         }}
       >
         <Button to="/contact" size="large">
-          Get in touch
+          Contact me <span style={{ marginLeft: "0.3rem" }}>&rarr;</span>
         </Button>
       </motion.div>
     </StyledHome>

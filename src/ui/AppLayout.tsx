@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Container from "./Container";
 import SideBar from "../scenes/nav/SideBar";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { Suspense } from "react";
+import FullPageSpinner from "./FullPageSpinner";
 
 const StyledAppLayout = styled.div<{ $sideBarWidth: number }>`
   display: grid;
@@ -31,9 +33,11 @@ function AppLayout() {
       <StyledSideBar>
         <SideBar />
       </StyledSideBar>
-      <Container>
-        <Outlet />
-      </Container>
+      <Suspense fallback={<FullPageSpinner />}>
+        <Container>
+          <Outlet />
+        </Container>
+      </Suspense>
     </StyledAppLayout>
   );
 }

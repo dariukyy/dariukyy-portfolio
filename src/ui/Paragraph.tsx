@@ -8,8 +8,10 @@ const Paragraph = styled.p`
   letter-spacing: 1.4px;
   line-height: 2;
   color: var(--color-grey-700);
+  margin-bottom: 1.5rem;
 
   @media ${device.mobile} {
+    font-size: 1.8rem;
     width: 85%;
     letter-spacing: 1.6px;
     line-height: 1.6;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import NavItem from "./NavItem";
-import { motion } from "framer-motion";
 import { navLinks } from "../../data/navLinks";
-import useMediaQuery from "../../hooks/useMediaQuery";
 
 const NavList = styled.ul`
   height: 100vh;
@@ -15,38 +13,17 @@ const NavList = styled.ul`
 `;
 
 function MainNav() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const fadeInAnimationVariants = {
-    initial: {
-      opacity: 0,
-      x: -100,
-    },
-    animate: (id: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.09 * id,
-        type: `${!isMobile} ? 'tween': 'none'`,
-      },
-    }),
-  };
-
   return (
     <NavList>
       {navLinks.map((link) => (
-        <motion.li
-          style={{ width: "100%", height: "auto" }}
-          initial={fadeInAnimationVariants.initial}
-          animate={fadeInAnimationVariants.animate(link.id)}
-          custom={link.id}
-        >
+        <li style={{ width: "100%" }} key={link.id}>
           <NavItem
-            key={link.id}
             to={link.to}
+            id={link.id}
             icon={link.icon}
             label={link.label}
           />
-        </motion.li>
+        </li>
       ))}
     </NavList>
   );

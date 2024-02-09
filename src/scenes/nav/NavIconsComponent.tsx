@@ -2,7 +2,9 @@ import { LiaLinkedinIn } from "react-icons/lia";
 import { PiGithubLogo } from "react-icons/pi";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { FaRegFilePdf } from "react-icons/fa";
+
 import { useDarkMode } from "../../context/DarkModeContext";
+
 import Menus from "../../ui/Menus";
 import ButtonIconComponent from "../../ui/ButtonIcon";
 import PDF_EN_URL from "../../assets/Darius-Parfijanovičius-CV-EN.pdf";
@@ -34,7 +36,7 @@ function NavIconsComponent() {
     // If the app is not installed, open the web page after a short delay
     setTimeout(() => {
       window.location.href = LINKEDIN_URL;
-    }, 500);
+    }, 200);
   };
 
   return (
