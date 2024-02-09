@@ -14,7 +14,7 @@ const Input = styled.input<{ $hasError?: boolean }>`
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius-sm);
   letter-spacing: 1.1px;
-  transition: none;
+  transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 
   &::placeholder {
     color: var(--color-grey-400);

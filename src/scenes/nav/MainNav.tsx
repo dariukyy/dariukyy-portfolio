@@ -1,11 +1,8 @@
-import { HiOutlineCollection, HiOutlineMail } from "react-icons/hi";
-import {
-  HiOutlineFolderOpen,
-  HiOutlineHome,
-  HiOutlineUser,
-} from "react-icons/hi2";
 import styled from "styled-components";
 import NavItem from "./NavItem";
+import { motion } from "framer-motion";
+import { navLinks } from "../../data/navLinks";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const NavList = styled.ul`
   height: 100vh;
@@ -18,15 +15,39 @@ const NavList = styled.ul`
 `;
 
 function MainNav() {
-  // const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      x: -100,
+    },
+    animate: (id: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.09 * id,
+        type: `${!isMobile} ? 'tween': 'none'`,
+      },
+    }),
+  };
 
   return (
     <NavList>
-      <NavItem to="/home" icon={<HiOutlineHome />} label="Home" />
-      <NavItem to="/about" icon={<HiOutlineUser />} label="About" />
-      <NavItem to="/skills" icon={<HiOutlineCollection />} label="Skills" />
-      <NavItem to="/projects" icon={<HiOutlineFolderOpen />} label="Projects" />
-      <NavItem to="/contact" icon={<HiOutlineMail />} label="Contact" />
+      {navLinks.map((link) => (
+        <motion.li
+          style={{ width: "100%" }}
+          initial={fadeInAnimationVariants.initial}
+          animate={fadeInAnimationVariants.animate(link.id)}
+          custom={link.id}
+        >
+          <NavItem
+            key={link.id}
+            to={link.to}
+            icon={link.icon}
+            label={link.label}
+          />
+        </motion.li>
+      ))}
     </NavList>
   );
 }

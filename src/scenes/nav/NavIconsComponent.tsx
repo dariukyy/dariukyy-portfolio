@@ -23,6 +23,20 @@ const LINKEDIN_URL = import.meta.env.VITE_APP_LINKEDIN_URL;
 function NavIconsComponent() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
+  const deepLink = `linkedin://profile/${LINKEDIN_URL}`;
+
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+
+    // Try to open the LinkedIn app
+    window.location.href = deepLink;
+
+    // If the app is not installed, open the web page after a short delay
+    setTimeout(() => {
+      window.location.href = LINKEDIN_URL;
+    }, 500);
+  };
+
   return (
     <StyledNavIcons>
       <Menus>
@@ -46,7 +60,7 @@ function NavIconsComponent() {
       <ButtonIconComponent href={GITHUB_URL}>
         <PiGithubLogo />
       </ButtonIconComponent>
-      <ButtonIconComponent href={LINKEDIN_URL}>
+      <ButtonIconComponent onClick={handleClick} href={deepLink}>
         <LiaLinkedinIn />
       </ButtonIconComponent>
       <ButtonIconComponent onClick={toggleDarkMode}>

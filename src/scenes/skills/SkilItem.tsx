@@ -16,6 +16,7 @@ function SkillItem({ skill }: { skill: SkillProp }) {
       },
     }),
   };
+
   const Icon = skill.icon;
   return (
     <motion.div

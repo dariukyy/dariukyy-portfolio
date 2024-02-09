@@ -15,7 +15,7 @@ const TextArea = styled.textarea<{ $hasError?: boolean }>`
   padding: 0.8rem 1.5rem;
   border-radius: var(--border-radius-sm);
   resize: vertical;
-  transition: none;
+  transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 
   @media ${device.mobile} {
     min-height: 5rem;

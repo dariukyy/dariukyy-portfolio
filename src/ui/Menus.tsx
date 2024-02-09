@@ -16,7 +16,8 @@ const ButtonIcon = styled.button<{ openId: string }>`
   border: none;
   padding: 1.2rem 2.4rem;
   border-radius: var(--border-radius-md);
-  transition: all 0.2s;
+  transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
+
   ${(props) =>
     props.openId === ""
       ? "background-color: var(--color-grey-0);"

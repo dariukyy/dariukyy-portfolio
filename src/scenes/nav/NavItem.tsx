@@ -1,20 +1,20 @@
-import { ReactNode } from "react";
+import { IconType } from "react-icons";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 import StyledNavLink from "./styled-components/StyledNavLink";
 
 interface NavItemProps {
   to: string;
-  icon: ReactNode;
+  icon: IconType;
   label: string;
 }
 
-function NavItem({ to, icon, label }: NavItemProps) {
+function NavItem({ to, icon: Icon, label }: NavItemProps) {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <StyledNavLink to={to}>
-      {icon}
+      <Icon />
       {!isMobile && <span>{label}</span>}
     </StyledNavLink>
   );
