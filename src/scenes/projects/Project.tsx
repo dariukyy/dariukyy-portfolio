@@ -16,16 +16,11 @@ const ProjectBoxImg = styled.img`
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
-
   border-top-left-radius: var(--border-radius-lg);
-  border: 1px solid var(--color-grey-200);
-  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4));
-  grid-row: 1 / -1;
-  grid-column: 2 / 3;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4)) brightness(88%);
 
-  @media ${device.mobile} {
-    width: auto;
-    height: auto;
+  @media (max-width: 883px) {
+    bottom: -2rem;
   }
 
   &:hover {
@@ -52,10 +47,10 @@ const ProjectBox = styled(motion.div)`
   border: 1px solid var(--color-grey-200);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  transition: background-color border box-shadow 0.3s;
+  /* transition: background-color border box-shadow 0.3s; */
 
-  @media ${device.mobile} {
-    height: auto;
+  @media (max-width: 883px) {
+    padding: 1.8rem;
   }
 
   @media ${device.tablet} {
@@ -76,9 +71,13 @@ const ProjectBoxContent = styled.div`
   width: 43%;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 2rem;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 883px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -90,15 +89,20 @@ const Title = styled.h1`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 `;
 
 const Desription = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   height: 100%;
   width: 100%;
   font-weight: 400;
   letter-spacing: 0.7px;
   color: var(--color-grey-500);
+
+  @media (max-width: 883px) {
+    width: 40%;
+  }
 `;
 
 const IconsComponent = styled.div`
@@ -112,7 +116,7 @@ const IconsComponent = styled.div`
 `;
 
 const ProjectBoxTags = styled.div`
-  width: 50%;
+  width: 43%;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -130,6 +134,7 @@ const ProjectTagItem = styled.p`
   color: var(--color-grey-700);
   border: 1px solid var(--color-grey-200);
   transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
 
   &:hover {
     transform: translateY(-0.3rem) scale(1.04);

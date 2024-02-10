@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiSupabaseFill } from "react-icons/ri";
 import {
@@ -57,4 +57,5 @@ export const skills: SkillsProps = [
     id: 15,
     color: "#db7093",
   },
+  { skill: "Sass", icon: FaSass, id: 16, color: "#cc6699" },
 ];

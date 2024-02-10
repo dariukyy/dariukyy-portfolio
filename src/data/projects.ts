@@ -1,5 +1,6 @@
-import FitnessImg from "../assets/fitness-app.jpeg";
-import NetflixImg from "../assets/netflix-copy.jpeg";
+import FitnessImg from "../assets/images/fitness-app.jpeg";
+import NetflixImg from "../assets/images/netflix-copy.jpeg";
+import NatoursImg from "../assets/images/natours-app.jpeg";
 
 export type Project = {
   id: number;
@@ -36,5 +37,16 @@ export const projectsData: PronectsDataProps = [
     image: NetflixImg,
     livePreview: "https://dariukyy-netflix-copy-react-tailwind.netlify.app/",
     codePreview: "https://github.com/dariukyy/netflix-copy",
+  },
+  {
+    id: 3,
+    title: "Natours",
+    alt: "Natours Website ScreenShoot",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
+    tags: ["HTML", "Sass"],
+    image: NatoursImg,
+    livePreview: "https://dariukyy-natours-sass.netlify.app/",
+    codePreview: "",
   },
 ];

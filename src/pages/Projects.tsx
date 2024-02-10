@@ -31,6 +31,7 @@ const ScrollDownComponent = styled.div`
   gap: 3rem;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 
   & p {
     font-weight: 600;
