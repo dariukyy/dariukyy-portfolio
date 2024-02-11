@@ -3,6 +3,7 @@ import { device } from "../utils/breakpoints";
 import ProjectsContainer from "../scenes/projects/ProjectsComponent";
 
 import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
+import { motion } from "framer-motion";
 
 const StyledProjects = styled.section`
   width: 90%;
@@ -14,7 +15,7 @@ const StyledProjects = styled.section`
   position: relative;
 `;
 
-const Header = styled.div`
+const Header = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +40,7 @@ const Header = styled.div`
 function Projects() {
   return (
     <StyledProjects>
-      <Header>
+      <Header initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
         <h1>Projects</h1>
         <ScrollDownIcon />
       </Header>

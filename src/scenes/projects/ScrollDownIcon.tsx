@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CgMouse } from "react-icons/cg";
 import styled from "styled-components";
 
-const ScrollDownComponent = styled.div`
+const ScrollDownComponent = styled(motion.div)`
   width: auto;
   height: auto;
   display: flex;
@@ -29,10 +29,22 @@ const ScrollDownComponent = styled.div`
 
 function ScrollDownIcon() {
   return (
-    <ScrollDownComponent>
+    <ScrollDownComponent
+      animate={{
+        scale: [1, 1.2, 1],
+        // opacity: [1, 0.8, 1],
+      }}
+      transition={{
+        delay: 0.8,
+        duration: 2,
+        times: [0, 0.5, 1],
+        loop: 1,
+        repeatDelay: 1,
+      }}
+    >
       <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: 16 }}
+        initial={{ y: 16 }}
+        animate={{ y: 0 }}
         transition={{
           repeat: Infinity,
           duration: 0.8,

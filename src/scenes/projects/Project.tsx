@@ -180,7 +180,7 @@ const ProjectBoxTags = styled.ul`
   }
 `;
 
-const ProjectTagItem = styled.li`
+const ProjectTagItem = styled(motion.li)`
   padding: 0.4rem 1rem;
   border-radius: var(--border-radius-lg);
   background-color: var(--color-brand-500);
@@ -203,6 +203,7 @@ type ProjectProps = {
   codePreview: string;
   alt: string;
   responsive: { isResponsive: boolean; responsiveText: string };
+  id: number;
 };
 
 function Project({
@@ -214,9 +215,30 @@ function Project({
   codePreview,
   alt,
   responsive,
+  id,
 }: ProjectProps) {
+  const VariantsForCard = {
+    initial: {
+      opacity: 0,
+      x: 300,
+    },
+    animate: (id: number) => ({
+      opacity: 1,
+      x: 0,
+      // threshold: 0.5,
+      transition: {
+        delay: 0.1 * id,
+      },
+    }),
+  };
+
   return (
-    <ProjectBox>
+    <ProjectBox
+      viewport={{ once: true }}
+      initial={VariantsForCard.initial}
+      whileInView={VariantsForCard.animate(id)}
+      custom={id}
+    >
       <ProjectImage src={image} alt={alt} />
       <Content>
         <Title>

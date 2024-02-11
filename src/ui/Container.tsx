@@ -24,7 +24,7 @@ const StyledContainer = styled.main<{ isProjectSection: boolean }>`
     display: none;
   }
 
-  */ @media ${device.mobile} {
+  @media ${device.mobile} {
     padding: 0;
   }
 
@@ -87,18 +87,6 @@ const Bubble2 = styled(motion.div)`
   }
 `;
 
-// const Header = styled.div`
-//   position: absolute;
-//   top: 20%;
-//   left: 12%;
-//   color: var(--color-brand-500);
-//   font-weight: 700;
-//   letter-spacing: 0.8px;
-//   z-index: 2;
-//   font-size: 2.5rem;
-//   text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
-// `;
-
 type ContainerProps = {
   children: ReactNode;
 };
@@ -108,9 +96,6 @@ function Container({ children }: ContainerProps) {
   const { pathname: path } = useLocation();
 
   const isProjectSection = path === "/projects";
-  // const isMobile = useMediaQuery(device.tablet);
-
-  // const HeaderName = path.toUpperCase().replace("/", "");
 
   const initialPositionForBubbles = { x: 0, y: 0 };
 
