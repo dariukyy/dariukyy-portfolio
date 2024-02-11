@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
+import ButtonIconComponent from "../../ui/ButtonIcon";
+import { MdRemoveRedEye } from "react-icons/md";
+import { FaCode } from "react-icons/fa";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import IconsComponent from "./IconsComponent";
 
 const ProjectBox = styled(motion.li)`
   position: relative;
@@ -27,15 +28,9 @@ const ProjectBox = styled(motion.li)`
   @media (max-width: 883px) {
     padding: 1rem 1.8rem 1.8rem 1.8rem;
   }
-
-  @media (max-width: 544px) {
-    gap: 1rem;
-    justify-content: flex-start;
-    min-height: 43rem;
-  }
 `;
 
-const ProjectImage = styled.img`
+const ProjectBoxImg = styled.img`
   position: absolute;
   right: -7.5rem;
   bottom: -1.5rem;
@@ -57,35 +52,15 @@ const ProjectImage = styled.img`
   @media (max-width: 883px) {
     width: 32rem;
   }
-
-  @media (max-width: 544px) {
-    left: 50%;
-    bottom: -21.5%;
-    transform: translate(-50%, 21.5%);
-    /* background-size: cover; */
-    object-fit: cover;
-    object-position: top left;
-    width: 90%;
-    height: 30rem;
-    border-top-right-radius: var(--border-radius-lg);
-
-    &:hover {
-      transform: none;
-    }
-  }
 `;
 
-const Content = styled.div`
+const ProjectBoxContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
-
-  @media (max-width: 544px) {
-    gap: 1rem;
-  }
 `;
 
 const Title = styled.h1`
@@ -98,12 +73,6 @@ const Title = styled.h1`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-
-  @media (max-width: 544px) {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 0;
-  }
 `;
 
 const Desription = styled.p`
@@ -117,17 +86,13 @@ const Desription = styled.p`
   @media (max-width: 883px) {
     width: 46%;
   }
-  @media (max-width: 544px) {
-    width: 100%;
-  }
 `;
 
-const ProjectInfoBox = styled.div`
+const IconsComponent = styled.ul`
   display: flex;
+  gap: 0.2rem;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-top: -0.8rem;
 `;
 
 const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
@@ -136,7 +101,7 @@ const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
   align-items: center;
   gap: 0.5rem;
   margin-right: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   ${(props) =>
     props.isResponsive
@@ -150,9 +115,6 @@ const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
       props.isResponsive
         ? `color: var(--color-green-100);`
         : `color: var(--color-red-800);`}
-  }
-  @media (max-width: 544px) {
-    margin: 0;
   }
 `;
 
@@ -169,11 +131,6 @@ const ProjectBoxTags = styled.ul`
 
   @media (max-width: 883px) {
     width: 46%;
-  }
-
-  @media (max-width: 544px) {
-    width: 100%;
-    margin: 1rem 0;
   }
 `;
 
@@ -214,23 +171,30 @@ function Project({
 }: ProjectProps) {
   return (
     <ProjectBox>
-      <ProjectImage src={image} alt={alt} />
-      <Content>
+      <ProjectBoxImg src={image} alt={alt} />
+      <ProjectBoxContent>
         <Title>
           {title}
-          <ProjectInfoBox>
+          <IconsComponent>
             <ResponsiveComponent isResponsive={responsive.isResponsive}>
               <FaRegCircleCheck />
               <span>{responsive.responsiveText}</span>
             </ResponsiveComponent>
-            <IconsComponent
-              linkForLivePreview={livePreview}
-              linkForCodePreview={codePreview}
-            />
-          </ProjectInfoBox>
+
+            <li>
+              <ButtonIconComponent href={livePreview} projectStyle={true}>
+                <MdRemoveRedEye />
+              </ButtonIconComponent>
+            </li>
+            <li>
+              <ButtonIconComponent href={codePreview} projectStyle={true}>
+                <FaCode />
+              </ButtonIconComponent>
+            </li>
+          </IconsComponent>
         </Title>
         <Desription>{description}</Desription>
-      </Content>
+      </ProjectBoxContent>
       <ProjectBoxTags>
         {tags.map((tag, index) => (
           <ProjectTagItem key={index}>{tag}</ProjectTagItem>
