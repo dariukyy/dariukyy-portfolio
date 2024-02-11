@@ -8,7 +8,7 @@ export const breakpoints: BreakpointValues = {
   mobile: "480px",
   tablet: "800px",
   desktop: "1024px",
-  smTablet: "600px",
+  smTablet: "768px",
 };
 
 export const device: BreakpointValues = {

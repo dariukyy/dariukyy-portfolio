@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/breakpoints";
 import { motion } from "framer-motion";
 import ButtonIconComponent from "../../ui/ButtonIcon";
 import { MdRemoveRedEye } from "react-icons/md";
@@ -7,7 +8,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 
 const ProjectBoxImg = styled.img`
   position: absolute;
-  right: -7.5rem;
+  right: -7rem;
   bottom: -1.5rem;
   width: 35rem;
   height: 30rem;
@@ -29,7 +30,7 @@ const ProjectBoxImg = styled.img`
   }
 `;
 
-const ProjectBox = styled(motion.li)`
+const ProjectBox = styled(motion.div)`
   position: relative;
   min-height: 35rem;
   max-width: 60rem;
@@ -52,6 +53,19 @@ const ProjectBox = styled(motion.li)`
   @media (max-width: 883px) {
     padding: 1rem 1.8rem 1.8rem 1.8rem;
   }
+
+  @media ${device.tablet} {
+    height: 20rem;
+  }
+
+  /* ${ProjectBoxImg} {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover ${ProjectBoxImg} {
+    transform: scale(1.04) translateX(-0.75rem) translateY(0.75rem)
+      rotate(-2deg);
+  } */
 `;
 
 const ProjectBoxContent = styled.div`
@@ -61,6 +75,10 @@ const ProjectBoxContent = styled.div`
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
+
+  @media (max-width: 883px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -84,7 +102,11 @@ const Desription = styled.p`
   color: var(--color-grey-500);
 
   @media (max-width: 883px) {
-    width: 46%;
+    width: 40%;
+  }
+
+  @media ${device.smTablet} {
+    width: 100%;
   }
 `;
 
@@ -130,7 +152,7 @@ const ProjectBoxTags = styled.ul`
   font-weight: 400;
 
   @media (max-width: 883px) {
-    width: 46%;
+    width: 45%;
   }
 `;
 
