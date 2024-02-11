@@ -2,6 +2,7 @@ import FitnessImg from "../assets/images/fitness-app.jpeg";
 import NetflixImg from "../assets/images/netflix-copy.jpeg";
 import NatoursImg from "../assets/images/natours-app.jpeg";
 import TheWildOasisImg from "../assets/images/the-wild-oasis-app.jpeg";
+import FastReactPizzaImg from "../assets/images/fast-react-pizza-app.jpeg";
 import { MdRemoveRedEye } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
@@ -29,7 +30,7 @@ export const projectsData: PronectsDataProps = [
     alt: "Fitness App Website ScreenShoot",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
-    tags: ["React", "Typescript", "Framer", "TailwindCSS"],
+    tags: ["React", "Typescript", "Framer Motion", "TailwindCSS"],
     image: FitnessImg,
     livePreview: "https://dariukyy-fitness-app.vercel.app/",
     codePreview: "https://github.com/dariukyy/fitness-practical-app",
@@ -49,6 +50,38 @@ export const projectsData: PronectsDataProps = [
   },
   {
     id: 3,
+    title: "Fast React Pizza",
+    alt: "Fast React Pizza App Website ScreenShoot",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+    tags: ["React", "Redux", "React Router", "TailwindCSS"],
+    image: FastReactPizzaImg,
+    livePreview: "https://dariukyy-fast-react-pizza-by.netlify.app/menu",
+    codePreview: "https://github.com/dariukyy/fast-react-pizza-",
+    responsive: { isResponsive: true, responsiveText: "Responsive" },
+  },
+  {
+    id: 4,
+    title: "The Wild Oasis",
+    alt: "The Wild Oasis Website ScreenShoot",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
+    tags: [
+      "React",
+      "Supabase",
+      "React Query",
+      "React Router",
+      "Recharts",
+      "Styled-Components",
+    ],
+    image: TheWildOasisImg,
+    livePreview:
+      "https://dariukyy-course-project-the-wild-oasis.vercel.app/dashboard",
+    codePreview: "https://github.com/dariukyy/the-wild-oasis",
+    responsive: { isResponsive: false, responsiveText: "Only Desktop" },
+  },
+  {
+    id: 5,
     title: "Natours",
     alt: "Natours Website ScreenShoot",
     description:
@@ -58,19 +91,6 @@ export const projectsData: PronectsDataProps = [
     livePreview: "https://dariukyy-natours-sass.netlify.app/",
     codePreview: "",
     responsive: { isResponsive: true, responsiveText: "Responsive" },
-  },
-  {
-    id: 4,
-    title: "The Wild Oasis",
-    alt: "The Wild Oasis Website ScreenShoot",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
-    tags: ["React", "Supabase", "React Query", "Recharts", "Styled-Components"],
-    image: TheWildOasisImg,
-    livePreview:
-      "https://dariukyy-course-project-the-wild-oasis.vercel.app/dashboard",
-    codePreview: "https://github.com/dariukyy/the-wild-oasis",
-    responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
 ];
 
