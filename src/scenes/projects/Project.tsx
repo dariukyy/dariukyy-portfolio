@@ -5,6 +5,31 @@ import { MdRemoveRedEye } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
+const ProjectBox = styled(motion.li)`
+  position: relative;
+  min-height: 35rem;
+  max-width: 60rem;
+  width: 100%;
+  background-color: var(--color-grey-100);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: var(--border-radius-lg);
+  /* padding: 1.5rem 1rem; */
+  padding: 1.5rem 2.3rem 2.3rem 2.3rem;
+  border: 1px solid var(--color-grey-200);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  /* transition: background-color border box-shadow 0.3s; */
+
+  @media (max-width: 883px) {
+    padding: 1rem 1.8rem 1.8rem 1.8rem;
+  }
+`;
+
 const ProjectBoxImg = styled.img`
   position: absolute;
   right: -7.5rem;
@@ -26,31 +51,6 @@ const ProjectBoxImg = styled.img`
 
   @media (max-width: 883px) {
     width: 32rem;
-  }
-`;
-
-const ProjectBox = styled(motion.li)`
-  position: relative;
-  min-height: 35rem;
-  max-width: 60rem;
-  width: 100%;
-  background-color: var(--color-grey-100);
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  border-radius: var(--border-radius-lg);
-  /* padding: 1.5rem 1rem; */
-  padding: 1.5rem 2.3rem 2.3rem 2.3rem;
-  border: 1px solid var(--color-grey-200);
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  /* transition: background-color border box-shadow 0.3s; */
-
-  @media (max-width: 883px) {
-    padding: 1rem 1.8rem 1.8rem 1.8rem;
   }
 `;
 

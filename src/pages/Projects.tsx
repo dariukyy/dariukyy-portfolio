@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
-import ProjectsContainer from "../scenes/projects/Projects";
+import ProjectsContainer from "../scenes/projects/ProjectsComponent";
 
 import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
 
