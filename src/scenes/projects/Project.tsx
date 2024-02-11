@@ -6,23 +6,21 @@ import IconsComponent from "./IconsComponent";
 
 const ProjectBox = styled(motion.li)`
   position: relative;
+  width: 100%;
   min-height: 35rem;
   max-width: 60rem;
-  width: 100%;
-  background-color: var(--color-grey-100);
   height: auto;
+  background-color: var(--color-grey-100);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
   border-radius: var(--border-radius-lg);
-  /* padding: 1.5rem 1rem; */
   padding: 1.5rem 2.3rem 2.3rem 2.3rem;
   border: 1px solid var(--color-grey-200);
   box-shadow: var(--shadow-md);
   overflow: hidden;
-  /* transition: background-color border box-shadow 0.3s; */
 
   @media (max-width: 883px) {
     padding: 1rem 1.8rem 1.8rem 1.8rem;
@@ -31,10 +29,9 @@ const ProjectBox = styled(motion.li)`
   @media (max-width: 544px) {
     gap: 1rem;
     justify-content: flex-start;
-    min-height: 43rem;
+    min-height: 53rem;
   }
 `;
-
 const ProjectImage = styled.img`
   position: absolute;
   right: -7.5rem;
@@ -47,7 +44,7 @@ const ProjectImage = styled.img`
   background-repeat: no-repeat;
   transition: transform 0.2s ease-in-out;
   border-top-left-radius: var(--border-radius-lg);
-  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4)) brightness(88%);
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4)) brightness(90%);
 
   &:hover {
     transform: scale(1.04) translateX(-0.75rem) translateY(0.75rem)
@@ -60,17 +57,19 @@ const ProjectImage = styled.img`
 
   @media (max-width: 544px) {
     left: 50%;
-    bottom: -21.5%;
+    bottom: 14.5%;
     transform: translate(-50%, 21.5%);
-    /* background-size: cover; */
     object-fit: cover;
     object-position: top left;
-    width: 90%;
-    height: 30rem;
-    border-top-right-radius: var(--border-radius-lg);
+    width: 93%;
+    height: 26rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.22);
+    filter: brightness(90%);
+    border: 2px solid var(--color-grey-200);
 
     &:hover {
-      transform: none;
+      transform: translate(-50%, 21.5%) scale(1.03);
     }
   }
 `;
@@ -102,7 +101,7 @@ const Title = styled.h1`
   @media (max-width: 544px) {
     flex-direction: column-reverse;
     align-items: flex-start;
-    gap: 0;
+    gap: 0.7rem;
   }
 `;
 
@@ -124,10 +123,13 @@ const Desription = styled.p`
 
 const ProjectInfoBox = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: -0.8rem;
+
+  @media (max-width: 544px) {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: -0.8rem;
+  }
 `;
 
 const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
@@ -173,17 +175,17 @@ const ProjectBoxTags = styled.ul`
 
   @media (max-width: 544px) {
     width: 100%;
-    margin: 1rem 0;
+    margin: 1.2rem 0;
   }
 `;
 
 const ProjectTagItem = styled.li`
   padding: 0.4rem 1rem;
   border-radius: var(--border-radius-lg);
-  background-color: var(--color-brand-200);
-  color: var(--color-grey-700);
-  border: 1px solid var(--color-grey-200);
-  transition: all 0.2s ease-in-out;
+  background-color: var(--color-brand-500);
+  color: var(--color-grey-900);
+  border: 2px solid var(--color-grey-200);
+  transition: all 0.2s;
   box-shadow: var(--shadow-sm);
 
   &:hover {
