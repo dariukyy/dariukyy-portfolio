@@ -3,6 +3,7 @@ import NetflixImg from "../assets/images/netflix-copy.jpeg";
 import NatoursImg from "../assets/images/natours-app.jpeg";
 import TheWildOasisImg from "../assets/images/the-wild-oasis-app.jpeg";
 import FastReactPizzaImg from "../assets/images/fast-react-pizza-app.jpeg";
+import WorldWiseImg from "../assets/images/world-wise-app.jpeg";
 import { MdRemoveRedEye } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
@@ -30,7 +31,7 @@ export const projectsData: PronectsDataProps = [
     alt: "Fitness App Website ScreenShoot",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
-    tags: ["React", "Typescript", "Framer Motion", "TailwindCSS"],
+    tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
     image: FitnessImg,
     livePreview: "https://dariukyy-fitness-app.vercel.app/",
     codePreview: "https://github.com/dariukyy/fitness-practical-app",
@@ -56,12 +57,24 @@ export const projectsData: PronectsDataProps = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
     tags: ["React", "Redux", "React Router", "TailwindCSS"],
     image: FastReactPizzaImg,
-    livePreview: "https://dariukyy-fast-react-pizza-by.netlify.app/menu",
+    livePreview: "https://dariukyy-fast-react-pizza-by.netlify.app",
     codePreview: "https://github.com/dariukyy/fast-react-pizza-",
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
     id: 4,
+    title: "World Wise",
+    alt: "World Wise App Website ScreenShoot",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+    tags: ["React", "React Router", "Leaflet", "CSS Modules"],
+    image: WorldWiseImg,
+    livePreview: "https://dariukyy-world-wise-app.netlify.app",
+    codePreview: "https://github.com/dariukyy/world-wise/tree/main",
+    responsive: { isResponsive: false, responsiveText: "Only Desktop" },
+  },
+  {
+    id: 5,
     title: "The Wild Oasis",
     alt: "The Wild Oasis Website ScreenShoot",
     description:
@@ -81,7 +94,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 5,
+    id: 6,
     title: "Natours",
     alt: "Natours Website ScreenShoot",
     description:

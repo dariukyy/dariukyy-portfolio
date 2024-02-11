@@ -13,24 +13,37 @@ function HomeComponent() {
   return (
     <StyledHome>
       <motion.img
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        whileHover={{ scale: 1.1 }}
-        transition={{
-          duration: 0.4,
-        }}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.1 }}
         src={MyPhoto}
       />
       <BrandHeader>My name is,</BrandHeader>
-      <h1>{NAME}</h1>
-      <Paragraph>{DESCRIPTION}</Paragraph>
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1.25 }}
+      <motion.h1
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: 0.7,
+          delay: 0.2,
+        }}
+      >
+        {NAME}
+      </motion.h1>
+      <Paragraph
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+        }}
+      >
+        {DESCRIPTION}
+      </Paragraph>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1.2 }}
+        transition={{
+          type: "tween",
+          duration: 0.3,
+          delay: 0.4,
         }}
       >
         <Button to="/contact" size="large">

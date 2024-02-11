@@ -36,11 +36,6 @@ const StyledHome = styled.section`
       width: 20rem;
       height: 20rem;
     }
-
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
-    }
   }
 `;
 export default StyledHome;

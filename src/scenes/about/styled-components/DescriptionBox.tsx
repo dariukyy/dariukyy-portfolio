@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../../utils/breakpoints";
+import { motion } from "framer-motion";
 
-const DescriptionBox = styled.div`
+const DescriptionBox = styled(motion.div)`
   background-color: var(--color-grey-100);
   border: 1px solid var(--color-grey-200);
   border-radius: var(--border-radius-md);

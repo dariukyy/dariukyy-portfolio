@@ -95,11 +95,17 @@ function ContactComponent() {
 
   return (
     <StyledContact>
-      <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
+      <Form
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.2 }}
+        ref={form}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <FormHeader
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.2 }}
         >
           Let's Collaborate!
         </FormHeader>
@@ -110,6 +116,9 @@ function ContactComponent() {
             animate={errors.name ? "shake" : "rest"}
           >
             <Input
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.35 }}
               type="text"
               placeholder="Name"
               id="name"
@@ -133,6 +142,9 @@ function ContactComponent() {
             animate={errors.email ? "shake" : "rest"}
           >
             <Input
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.55 }}
               type="text"
               placeholder="Email"
               id="email"
@@ -159,6 +171,9 @@ function ContactComponent() {
             animate={errors.message ? "shake" : "rest"}
           >
             <TextArea
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.75 }}
               rows={4}
               placeholder="Message"
               id="message"
@@ -176,13 +191,9 @@ function ContactComponent() {
           )}
         </FormGroup>
         <motion.div
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.1 }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 0.7,
-          }}
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.95 }}
           style={{ marginBottom: "2rem" }}
         >
           <Button disabled={isLoading} size="large">

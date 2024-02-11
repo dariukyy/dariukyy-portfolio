@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
-
-const Paragraph = styled.p`
+import { motion } from "framer-motion";
+const Paragraph = styled(motion.p)`
   font-size: 2rem;
   width: 80%;
   text-align: center;

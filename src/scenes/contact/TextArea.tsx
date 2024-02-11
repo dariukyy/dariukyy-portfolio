@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
+import { motion } from "framer-motion";
 
-const TextArea = styled.textarea<{ $hasError?: boolean }>`
+const TextArea = styled(motion.textarea)<{ $hasError?: boolean }>`
   font-size: 1.5rem;
   min-height: 15rem;
   width: 100%;

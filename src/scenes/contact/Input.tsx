@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
+import { motion } from "framer-motion";
 
-const Input = styled.input<{ $hasError?: boolean }>`
+const Input = styled(motion.input)<{ $hasError?: boolean }>`
   font-size: 1.5rem;
   width: 100%;
   width: 100%;

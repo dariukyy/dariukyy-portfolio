@@ -11,6 +11,7 @@ const ProjectBox = styled(motion.li)`
   max-width: 60rem;
   height: auto;
   background-color: var(--color-grey-100);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

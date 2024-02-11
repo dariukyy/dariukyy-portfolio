@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../../utils/breakpoints";
 
-const Form = styled.form`
+const Form = styled(motion.form)`
   max-width: 60rem;
   width: 100%;
   background-color: var(--color-grey-100);
@@ -38,7 +38,7 @@ const FormHeader = styled(motion.h1)`
   text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
 
   @media ${device.mobile} {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     /* margin-bottom: 1rem; */
   }
 `;
