@@ -102,8 +102,8 @@ export const projectsData: PronectsDataProps = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
     tags: ["HTML", "Sass"],
     image: NatoursImg,
-    livePreview: "https://dariukyy-natours-sass.netlify.app/",
-    codePreview: "",
+    livePreview: "https://natours-sass-gamma.vercel.app/",
+    codePreview: "https://github.com/dariukyy/natours-sass",
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
 ];
