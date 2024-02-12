@@ -13,6 +13,7 @@ const DescriptionBox = styled(motion.div)`
   letter-spacing: 0.9px;
   line-height: 2;
   font-weight: 500;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
