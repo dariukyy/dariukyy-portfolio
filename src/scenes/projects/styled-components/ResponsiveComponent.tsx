@@ -6,7 +6,7 @@ const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
   align-items: center;
   gap: 0.5rem;
   margin-right: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
   ${(props) =>
     props.isResponsive
@@ -14,8 +14,8 @@ const ResponsiveComponent = styled.li<{ isResponsive: boolean }>`
       : `color: var(--color-red-800);`}
 
   & svg {
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     ${(props) =>
       props.isResponsive
         ? `color: var(--color-green-100);`
