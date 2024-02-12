@@ -40,14 +40,14 @@ export const projectsData: PronectsDataProps = [
   },
   {
     id: 2,
-    title: "Fast React Pizza",
-    alt: "Fast React Pizza App Website ScreenShoot",
+    title: "Dariukyy Fast Pizza",
+    alt: "Fast Pizza App Website ScreenShoot",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
     tags: ["React", "Redux", "React Router", "TailwindCSS"],
     image: FastReactPizzaImg,
-    livePreview: "https://dariukyy-fast-react-pizza-by.netlify.app",
-    codePreview: "https://github.com/dariukyy/fast-react-pizza-",
+    livePreview: "https://dariukyy-fast-pizza.vercel.app/",
+    codePreview: "https://github.com/dariukyy/dariukyy-fast-pizza",
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
@@ -90,7 +90,7 @@ export const projectsData: PronectsDataProps = [
     ],
     image: TheWildOasisImg,
     livePreview:
-      "https://dariukyy-course-project-the-wild-oasis.vercel.app/dashboard",
+      "https://dariukyy-course-project-the-wild-oasis.vercel.app/login",
     codePreview: "https://github.com/dariukyy/the-wild-oasis",
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
