@@ -1,4 +1,4 @@
-import MyPhoto from "../../../public/images/my-photo.jpeg";
+import MyPhoto from "/images/my-photo.jpeg";
 import Button from "../../ui/Button";
 import Paragraph from "../../ui/Paragraph";
 import { motion } from "framer-motion";

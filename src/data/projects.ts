@@ -2,12 +2,12 @@ import { MdRemoveRedEye } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
 
-import FitnessImg from "../../public/images/fitness-app.jpeg";
-import NetflixImg from "../../public/images/netflix-copy.jpeg";
-import NatoursImg from "../../public/images/natours-app.jpeg";
-import TheWildOasisImg from "../../public/images/the-wild-oasis-app.jpeg";
-import FastReactPizzaImg from "../../public/images/fast-react-pizza-app.jpeg";
-import WorldWiseImg from "../../public/images/world-wise-app.jpeg";
+import FitnessImg from "/images/fitness-app.jpeg";
+import NetflixImg from "/images/netflix-copy.jpeg";
+import NatoursImg from "/images/natours-app.jpeg";
+import TheWildOasisImg from "/images/the-wild-oasis-app.jpeg";
+import FastReactPizzaImg from "/images/fast-react-pizza-app.jpeg";
+import WorldWiseImg from "/images/world-wise-app.jpeg";
 
 type ResponsiveProps = { isResponsive: boolean; responsiveText: string };
 
