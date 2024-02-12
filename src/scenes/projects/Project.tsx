@@ -42,7 +42,7 @@ function Project({
   const VariantsForCard = {
     initial: {
       opacity: 0,
-      x: 300,
+      x: 100,
     },
     animate: (id: number) => ({
       opacity: 1,

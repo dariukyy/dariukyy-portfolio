@@ -9,11 +9,13 @@ const ScrollComponent = styled.div`
   width: 100%;
   height: 100%;
   z-index: 2;
-  overflow-y: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  behavior: smooth;
 `;
 const StyledProjects = styled.section`
   width: 90%;
