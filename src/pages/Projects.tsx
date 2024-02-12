@@ -1,18 +1,27 @@
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
-import ProjectsContainer from "../scenes/projects/ProjectsComponent";
+import ProjectsContainer from "../scenes/projects/Projects";
 
 import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
 import { motion } from "framer-motion";
 
+const ScrollComponent = styled.div`
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 const StyledProjects = styled.section`
   width: 90%;
   height: 100%;
-  z-index: 2;
   padding: 0 2rem;
-  overflow-y: scroll;
   padding-bottom: 4rem;
   position: relative;
+  z-index: 2;
 `;
 
 const Header = styled(motion.div)`
@@ -39,13 +48,18 @@ const Header = styled(motion.div)`
 
 function Projects() {
   return (
-    <StyledProjects>
-      <Header initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>
-        <h1>Projects</h1>
-        <ScrollDownIcon />
-      </Header>
-      <ProjectsContainer />
-    </StyledProjects>
+    <ScrollComponent>
+      <StyledProjects>
+        <Header
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
+          <h1>Projects</h1>
+          <ScrollDownIcon />
+        </Header>
+        <ProjectsContainer />
+      </StyledProjects>
+    </ScrollComponent>
   );
 }
 

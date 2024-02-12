@@ -7,10 +7,12 @@ const StyledProjects = styled.ul`
   flex-direction: column;
   gap: 6rem;
   margin-top: 4rem;
+  padding-bottom: 2rem;
   justify-content: center;
   align-items: center;
 `;
-function ProjectsContainer() {
+
+function Projects() {
   return (
     <StyledProjects>
       {projectsData.map((project) => (
@@ -20,4 +22,4 @@ function ProjectsContainer() {
   );
 }
 
-export default ProjectsContainer;
+export default Projects;

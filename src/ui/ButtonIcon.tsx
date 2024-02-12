@@ -5,12 +5,17 @@ import {
 } from "react";
 import styled from "styled-components";
 
-const ButtonIcon = styled.button<{ projectStyle: boolean }>`
+type ButtonForProjectsProps = {
+  projectStyle?: boolean;
+};
+
+const ButtonIcon = styled.button<ButtonForProjectsProps>`
   display: flex;
   justify-content: center;
   align-items: center;
   background: none;
   border: none;
+
   ${(props) =>
     props.projectStyle ? "padding: 0.5rem;" : " padding: 1.2rem 2.4rem;"}
 
@@ -63,11 +68,7 @@ const ButtonIconComponent = (props: ButtonIconProps) => {
     );
   } else {
     const { children, ...rest } = props as ButtonProps;
-    return (
-      <ButtonIcon projectStyle {...rest}>
-        {children}
-      </ButtonIcon>
-    );
+    return <ButtonIcon {...rest}>{children}</ButtonIcon>;
   }
 };
 
