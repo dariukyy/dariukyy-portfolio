@@ -8,7 +8,7 @@ const StyledAbout = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  gap: 3rem;
 `;
 
 export default StyledAbout;

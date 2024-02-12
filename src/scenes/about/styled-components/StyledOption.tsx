@@ -6,7 +6,7 @@ type StyledOptionProps = {
 };
 
 const StyledOption = styled.button<StyledOptionProps>`
-  background-color: var(--color-grey-200);
+  background-color: var(--color-grey-100);
   border: none;
   border-radius: var(--border-radius-sm);
   font-weight: 500;
