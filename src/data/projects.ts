@@ -28,18 +28,6 @@ type PronectsDataProps = Project[];
 export const projectsData: PronectsDataProps = [
   {
     id: 1,
-    title: "Fitness App",
-    alt: "Fitness App Website ScreenShoot",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
-    tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
-    image: FitnessImg,
-    livePreview: "https://dariukyy-fitness-app.vercel.app/",
-    codePreview: "https://github.com/dariukyy/fitness-practical-app",
-    responsive: { isResponsive: true, responsiveText: "Responsive" },
-  },
-  {
-    id: 2,
     title: "Netflix Copy",
     alt: "Netflix Copy Website ScreenShoot",
     description:
@@ -51,7 +39,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 3,
+    id: 2,
     title: "Fast React Pizza",
     alt: "Fast React Pizza App Website ScreenShoot",
     description:
@@ -60,6 +48,18 @@ export const projectsData: PronectsDataProps = [
     image: FastReactPizzaImg,
     livePreview: "https://dariukyy-fast-react-pizza-by.netlify.app",
     codePreview: "https://github.com/dariukyy/fast-react-pizza-",
+    responsive: { isResponsive: true, responsiveText: "Responsive" },
+  },
+  {
+    id: 3,
+    title: "Fitness App",
+    alt: "Fitness App Website ScreenShoot",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+    tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
+    image: FitnessImg,
+    livePreview: "https://dariukyy-fitness-app.vercel.app/",
+    codePreview: "https://github.com/dariukyy/fitness-practical-app",
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
