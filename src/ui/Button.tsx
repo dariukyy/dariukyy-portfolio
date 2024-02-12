@@ -7,7 +7,7 @@ type Variation = "primary" | "secondary" | "danger" | "empty";
 
 type ButtonProps = {
   size?: Size;
-  variation?: Variation;
+  $variation?: Variation;
   to?: string;
   children: ReactNode;
   onClick?: () => void;
@@ -87,7 +87,7 @@ const ButtonEl = styled.button<ButtonProps>`
   -webkit-tap-highlight-color: transparent;
 
   ${(props) => sizes[props.size || "medium"]}
-  ${(props) => variations[props.variation || "primary"]}
+  ${(props) => variations[props.$variation || "primary"]}
 `;
 
 const Button = ({ to, children, ...props }: ButtonProps) => {
@@ -103,7 +103,7 @@ const Button = ({ to, children, ...props }: ButtonProps) => {
 };
 
 ButtonEl.defaultProps = {
-  variation: "primary",
+  $variation: "primary",
   size: "medium",
 };
 

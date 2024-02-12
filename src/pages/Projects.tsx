@@ -4,6 +4,8 @@ import ProjectsContainer from "../scenes/projects/Projects";
 
 import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
 import { motion } from "framer-motion";
+import { useScrollToTop } from "../hooks/useScrollToTop";
+import ScrollToTopBox from "../scenes/projects/ScrollToTopBox";
 
 const ScrollComponent = styled.div`
   width: 100%;
@@ -11,7 +13,6 @@ const ScrollComponent = styled.div`
   z-index: 2;
   overflow-y: scroll;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
@@ -47,8 +48,9 @@ const Header = styled(motion.div)`
 `;
 
 function Projects() {
+  const [scrollRef, scrollToTop, isAtTop] = useScrollToTop();
   return (
-    <ScrollComponent>
+    <ScrollComponent ref={scrollRef}>
       <StyledProjects>
         <Header
           initial={{ y: -100, opacity: 0 }}
@@ -59,6 +61,8 @@ function Projects() {
         </Header>
         <ProjectsContainer />
       </StyledProjects>
+
+      {!isAtTop && <ScrollToTopBox onClick={scrollToTop} />}
     </ScrollComponent>
   );
 }

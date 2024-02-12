@@ -4,21 +4,23 @@ import styled from "styled-components";
 
 const StyledScrollToTopButton = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: auto;
+  z-index: 1000;
   /* display: flex;
   justify-content: flex-end;
   align-items: center; */
-  margin-top: -4rem;
+  /* margin-top: 2rem; */
+  position: absolute;
+  right: -80%;
+  bottom: 2rem;
 `;
 
 const ToTopButton = styled.button`
-  bottom: -2rem;
-  right: 0rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: var(--border-radius-md);
   background-color: var(--color-brand-500);
   border: 2px solid var(--color-grey-300);
@@ -29,8 +31,8 @@ const ToTopButton = styled.button`
   }
 
   & svg {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     color: var(--color-grey-200);
 
     &:hover {
@@ -39,12 +41,7 @@ const ToTopButton = styled.button`
   }
 `;
 
-function ScrollToTopButton() {
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    console.log(window.top);
-  };
-
+function ScrollToTopBox({ onClick }: { onClick: () => void }) {
   return (
     <StyledScrollToTopButton
       initial={{ opacity: 0, x: 100 }}
@@ -52,11 +49,11 @@ function ScrollToTopButton() {
       viewport={{ once: true }}
       transition={{ duration: 0.1, delay: 0.5 }}
     >
-      <ToTopButton onClick={handleClick}>
+      <ToTopButton onClick={onClick}>
         <IoIosArrowUp />
       </ToTopButton>
     </StyledScrollToTopButton>
   );
 }
 
-export default ScrollToTopButton;
+export default ScrollToTopBox;
