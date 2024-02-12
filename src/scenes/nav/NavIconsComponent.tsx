@@ -7,8 +7,8 @@ import { useDarkMode } from "../../context/DarkModeContext";
 
 import Menus from "../../ui/Menus";
 import ButtonIconComponent from "../../ui/ButtonIcon";
-import PDF_EN_URL from "../../assets/Darius-Parfijanovičius-CV-EN.pdf";
-import PDF_LT_URL from "../../assets/Darius-Parfijanovičius-CV-LT.pdf";
+import PDF_EN_URL from "../../../public/Darius-Parfijanovičius-CV-EN.pdf";
+import PDF_LT_URL from "../../../public/Darius-Parfijanovičius-CV-LT.pdf";
 import MenusIconAndText from "./styled-components/MenusIconAndText";
 import StyledNavIcons from "./styled-components/StyledNavIcons";
 

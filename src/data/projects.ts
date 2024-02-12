@@ -1,12 +1,13 @@
-import FitnessImg from "../assets/images/fitness-app.jpeg";
-import NetflixImg from "../assets/images/netflix-copy.jpeg";
-import NatoursImg from "../assets/images/natours-app.jpeg";
-import TheWildOasisImg from "../assets/images/the-wild-oasis-app.jpeg";
-import FastReactPizzaImg from "../assets/images/fast-react-pizza-app.jpeg";
-import WorldWiseImg from "../assets/images/world-wise-app.jpeg";
 import { MdRemoveRedEye } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
 import { IconType } from "react-icons";
+
+import FitnessImg from "../../public/images/fitness-app.jpeg";
+import NetflixImg from "../../public/images/netflix-copy.jpeg";
+import NatoursImg from "../../public/images/natours-app.jpeg";
+import TheWildOasisImg from "../../public/images/the-wild-oasis-app.jpeg";
+import FastReactPizzaImg from "../../public/images/fast-react-pizza-app.jpeg";
+import WorldWiseImg from "../../public/images/world-wise-app.jpeg";
 
 type ResponsiveProps = { isResponsive: boolean; responsiveText: string };
 
