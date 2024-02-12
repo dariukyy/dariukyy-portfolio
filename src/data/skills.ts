@@ -48,7 +48,7 @@ export const skills: SkillsProps = [
     skill: "CSS Modules",
     icon: SiCssmodules,
     id: 14,
-    fill: "var(--color-grey-900)",
+    fill: "var(--color-grey-800)",
     transition: "all 0.3s",
   },
   {
