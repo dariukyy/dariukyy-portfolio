@@ -6,7 +6,7 @@ const StyledBrandHeader = styled(motion.h3)`
   color: var(--color-brand-500);
   font-weight: 700;
   letter-spacing: 0.8px;
-  margin-bottom: -2.5rem;
+  margin-bottom: -2rem;
 `;
 
 type BrandHeaderProps = {

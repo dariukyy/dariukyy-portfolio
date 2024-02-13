@@ -7,5 +7,6 @@ const StyledSkillsComponent = styled.section`
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+  margin-bottom: 9.8rem;
 `;
 export default StyledSkillsComponent;

@@ -16,6 +16,6 @@ export const aboutData: AboutDataProps = [
     id: 2,
     option: "Personal Bio",
     description:
-      "As i mentioned my name is Darius, and I live in Vilnius. From 2018 until autumn 2023, I served in the Lithuanian army in a mechanized infantry battalion. During these years, I not only gained a strong character and developed leadership skills but also realized that my calling lies in another field - programming. So, while still serving as a soldier, in the summer of 2022, I began my journey as a front-end developer.",
+      "I am a 26 years old energetic and happy father of a girl. I live in Vilnius. From 2018 until autumn 2023, I served in the Lithuanian army in a mechanized infantry battalion. During these years, I not only gained a strong character and developed leadership skills but also realized that my calling lies in another field - programming. So, while still serving as a soldier, in the summer of 2022, I began my journey as a front-end developer.",
   },
 ];

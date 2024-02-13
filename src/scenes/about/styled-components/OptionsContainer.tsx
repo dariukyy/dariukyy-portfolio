@@ -13,7 +13,7 @@ const OptionsContainer = styled(motion.ul)`
   justify-content: space-around;
 
   @media ${device.mobile} {
-    gap: 0.5rem;
+    gap: 1.5rem;
     justify-content: space-between;
   }
 `;

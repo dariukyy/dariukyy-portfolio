@@ -8,7 +8,7 @@ const StyledHeader = styled(motion.div)`
 
   align-items: center;
   justify-content: center;
-  margin-bottom: -13rem;
+
   z-index: 999;
 
   & h1 {

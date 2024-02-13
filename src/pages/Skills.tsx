@@ -1,7 +1,13 @@
 import SkillsComponent from "../scenes/skills/SkillsComponent";
+import Header from "../ui/Header";
 
 function Skills() {
-  return <SkillsComponent />;
+  return (
+    <>
+      <Header />
+      <SkillsComponent />
+    </>
+  );
 }
 
 export default Skills;

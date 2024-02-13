@@ -6,7 +6,7 @@ const StyledProjects = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 6rem;
-  margin-top: 4rem;
+  margin-top: 6rem;
   padding-bottom: 2rem;
   justify-content: center;
   align-items: center;

@@ -1,7 +1,13 @@
 import ContactComponent from "../scenes/contact/ContactComponent";
+import Header from "../ui/Header";
 
 function Contact() {
-  return <ContactComponent />;
+  return (
+    <>
+      <Header />
+      <ContactComponent />
+    </>
+  );
 }
 
 export default Contact;

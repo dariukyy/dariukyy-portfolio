@@ -10,13 +10,13 @@ const StyledOption = styled.button<StyledOptionProps>`
   border: none;
   border-radius: var(--border-radius-sm);
   font-weight: 500;
-  font-size: 1.4rem;
-  padding: 0.44rem 0.8rem;
+  font-size: 1.6rem;
+  padding: 0.6rem 1rem;
   transition: all 0.3s ease 0s;
 
-  @media ${device.mobile} {
-    font-size: 1.3rem;
-  }
+  /* @media ${device.mobile} {
+    font-size: 1.5rem;
+  } */
 
   &:hover {
     background-color: var(--color-brand-500);

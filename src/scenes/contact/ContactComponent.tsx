@@ -19,7 +19,7 @@ import Button from "../../ui/Button";
 // Styled components
 const StyledContact = styled.section`
   width: 90%;
-  height: 30%;
+  height: 100%;
   z-index: 2;
   padding: 0 2rem;
   display: flex;
@@ -27,6 +27,11 @@ const StyledContact = styled.section`
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 544px) {
+    margin-bottom: 9.8rem;
+  }
 `;
 
 // Types

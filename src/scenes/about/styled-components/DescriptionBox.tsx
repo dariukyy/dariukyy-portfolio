@@ -13,7 +13,7 @@ const DescriptionBox = styled(motion.div)`
   letter-spacing: 0.9px;
   line-height: 2;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,10 +40,10 @@ const DescriptionBox = styled(motion.div)`
 
   @media ${device.mobile} {
     width: 100%;
-    letter-spacing: 0.6px;
-    line-height: 1.7;
-    font-size: 1.3rem;
-    padding: 1.2rem 2rem 2rem;
+    letter-spacing: 0.9px;
+    line-height: 1.9;
+    font-size: 1.4rem;
+    padding: 1.5rem 1.9rem;
   }
 `;
 export default DescriptionBox;

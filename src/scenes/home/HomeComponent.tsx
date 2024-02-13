@@ -6,8 +6,9 @@ import BrandHeader from "../../ui/BrandHeader";
 import StyledHome from "./styled-components/StyledHome";
 
 const NAME = "Darius Parfijanovičius";
+const HEADER = "My name is,";
 const DESCRIPTION =
-  "I'm a junior frontend developer with a passion for learning and building innovative solutions. I specialize with technologies like React, Redux, TypeScript, styled-components and TailwindCSS.";
+  "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passion for learning and building innovative solutions. I specialize with technologies like React, Redux, TypeScript, styled-components and TailwindCSS.";
 
 function HomeComponent() {
   return (
@@ -18,7 +19,7 @@ function HomeComponent() {
         transition={{ delay: 0.1 }}
         src={MyPhoto}
       />
-      <BrandHeader>My name is,</BrandHeader>
+      <BrandHeader>{HEADER}</BrandHeader>
       <motion.h1
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
