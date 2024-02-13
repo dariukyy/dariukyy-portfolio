@@ -99,7 +99,7 @@ export const projectsData: PronectsDataProps = [
     title: "Natours",
     alt: "Natours Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
+      "Designed an eye-catching website filled with captivating animations using Sass. Immerse yourself in a visually stunning experience as animations bring content to life, showcasing creativity and expertise in frontend development. Explore the power of Sass to streamline styling and create dynamic web experiences",
     tags: ["HTML", "Sass"],
     image: NatoursImg,
     livePreview: "https://natours-sass-gamma.vercel.app/",
