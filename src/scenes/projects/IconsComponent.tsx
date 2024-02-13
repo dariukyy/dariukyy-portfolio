@@ -25,12 +25,12 @@ function IconsComponent({
   return (
     <StyledIconsComponent>
       <li>
-        <ButtonIconComponent href={linkForLivePreview} projectStyle={true}>
+        <ButtonIconComponent href={linkForLivePreview} $projectStyle={true}>
           <MdRemoveRedEye />
         </ButtonIconComponent>
       </li>
       <li>
-        <ButtonIconComponent href={linkForCodePreview} projectStyle={true}>
+        <ButtonIconComponent href={linkForCodePreview} $projectStyle={true}>
           <FaCode />
         </ButtonIconComponent>
       </li>
