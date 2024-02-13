@@ -43,7 +43,7 @@ export const projectsData: PronectsDataProps = [
     title: "Dariukyy Fast Pizza",
     alt: "Fast Pizza App Website ScreenShoot",
     description:
-      "A dynamic pizza ordering app using React, Tailwind CSS and live pizza data from the API. Explore a seamless user interface, showcasing expertise in frontend development and UI design. Experience the fusion of modern web technologies and real-time data integration in this delicious project.",
+      "A dynamic pizza ordering app using live pizza data from the API. Explore a seamless user interface, showcasing expertise in frontend development and UI design. Modern web technologies and real-time data integration.",
     tags: ["React", "Redux", "React Router", "TailwindCSS"],
     image: FastReactPizzaImg,
     livePreview: "https://dariukyy-fast-pizza.vercel.app/",
@@ -55,7 +55,7 @@ export const projectsData: PronectsDataProps = [
     title: "Fitness App",
     alt: "Fitness App Website ScreenShoot",
     description:
-      "A modern presentational fitness app. Dive into an immersive user experience with fluid transitions and dynamic UI elements, showcasing proficiency in frontend development and design.",
+      "A modern fitness app with React, TypeScript, Tailwind CSS, and Framer Motion for captivating animations. Dive into an immersive user experience with fluid transitions and dynamic UI elements, showcasing proficiency in frontend development and design.",
     tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
     image: FitnessImg,
     livePreview: "https://dariukyy-fitness-app.vercel.app/",
@@ -67,7 +67,7 @@ export const projectsData: PronectsDataProps = [
     title: "World Wise",
     alt: "World Wise App Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      "A real-world project integrating city data API into a Leaflet map library, enabling users to track their travels by registering visited cities. Experience interactive map interface, demonstrating proficiency in frontend development and API integration. Explore the real-world data and user engagement in this dynamic travel companion.",
     tags: ["React", "React Router", "Leaflet", "CSS Modules"],
     image: WorldWiseImg,
     livePreview: "https://dariukyy-world-wise-app.netlify.app",
@@ -79,7 +79,7 @@ export const projectsData: PronectsDataProps = [
     title: "The Wild Oasis",
     alt: "The Wild Oasis Website ScreenShoot",
     description:
-      "A full-stack hotel management application, leveraging Supabase for backend operations and authentication, seamlessly integrates frontend and backend functionalities. A modern and efficient solution for hotel management, showcasing expertise in full-stack development and data-driven UI design.",
+      "A full-stack hotel management application, leveraging Supabase for backend operations, CRUD, and authentication, seamlessly integrates frontend and backend functionalities and data-driven UI design.",
     tags: [
       "React",
       "Supabase",

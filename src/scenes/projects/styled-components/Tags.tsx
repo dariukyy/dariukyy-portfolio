@@ -18,7 +18,7 @@ export const ProjectBoxTags = styled.ul`
 
   @media (max-width: 544px) {
     width: 100%;
-    margin: 1.2rem 0;
+    margin: 1.8rem 0;
   }
 `;
 
