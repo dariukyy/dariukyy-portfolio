@@ -30,7 +30,7 @@ const StyledHome = styled.section`
     border-radius: 50%;
     box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.2);
     border: 1px solid var(--color-grey-50);
-    filter: grayscale(90%);
+    filter: grayscale(90%) opacity(var(--image-opacity));
 
     @media ${device.mobile} {
       width: 20rem;
