@@ -27,7 +27,7 @@ const ProjectBox = styled(motion.li)`
   @media (max-width: 544px) {
     gap: 1rem;
     justify-content: flex-start;
-    min-height: 56rem;
+    min-height: 58rem;
   }
 `;
 export default ProjectBox;
