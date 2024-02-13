@@ -13,7 +13,7 @@ const ProjectBox = styled(motion.li)`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 2rem;
   border-radius: var(--border-radius-lg);
   padding: 1.5rem 2.3rem 2.3rem 2.3rem;
   border: 1px solid var(--color-grey-200);
