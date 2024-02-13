@@ -6,7 +6,7 @@ import {
 import styled from "styled-components";
 
 type ButtonForProjectsProps = {
-  projectStyle?: boolean;
+  $projectStyle?: boolean;
 };
 
 const ButtonIcon = styled.button<ButtonForProjectsProps>`
@@ -17,7 +17,7 @@ const ButtonIcon = styled.button<ButtonForProjectsProps>`
   border: none;
 
   ${(props) =>
-    props.projectStyle ? "padding: 0.5rem;" : " padding: 1.2rem 2.4rem;"}
+    props.$projectStyle ? "padding: 0.5rem;" : " padding: 1.2rem 2.4rem;"}
 
   border-radius: var(--border-radius-md);
   transition: all 0.2s;
@@ -35,7 +35,7 @@ const ButtonIcon = styled.button<ButtonForProjectsProps>`
     width: 2.2rem;
     height: 2.2rem;
     ${(props) =>
-      props.projectStyle
+      props.$projectStyle
         ? "color: var(--color-brand-500);"
         : "color: var(--color-brand-600);"}
   }
@@ -47,7 +47,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
-  projectStyle?: boolean;
+  $projectStyle?: boolean;
 };
 
 type ButtonIconProps = { href?: string } & (ButtonProps | AnchorProps);
@@ -58,7 +58,7 @@ const ButtonIconComponent = (props: ButtonIconProps) => {
     return (
       <ButtonIcon
         as="a"
-        projectStyle={rest.projectStyle || false}
+        $projectStyle={rest.$projectStyle || false}
         href={href}
         target="_blank"
         {...rest}

@@ -21,7 +21,6 @@ const StyledSideBar = styled.aside`
   grid-area: sidebar;
   background-color: var(--color-grey-0);
   border-right: 1px solid var(--color-grey-100);
-  /* border: 1px solid var(--color-grey-50); */
 `;
 
 function AppLayout() {

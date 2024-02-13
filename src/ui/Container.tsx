@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Toaster } from "react-hot-toast";
 import useSidebarWidth from "../hooks/useSideBarWidth";
 
-const StyledContainer = styled.main<{ isProjectSection: boolean }>`
+const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   position: relative;
   background-color: var(--color-grey-50);
   width: 100%;
@@ -76,8 +76,6 @@ const Bubble2 = styled(motion.div)`
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
   clip-path: circle(8.9% at 14.3% 36.9%);
   z-index: 1;
   overflow: hidden;
@@ -95,7 +93,7 @@ function Container({ children }: ContainerProps) {
   const sideBarWidth = useSidebarWidth();
   const { pathname: path } = useLocation();
 
-  const isProjectSection = path === "/projects";
+  const $isProjectSection = path === "/projects";
 
   const initialPositionForBubbles = { x: 0, y: 0 };
 
@@ -150,7 +148,7 @@ function Container({ children }: ContainerProps) {
   // -20% 0% 0% 31
   // 18% 0% 20% -70%
   return (
-    <StyledContainer isProjectSection={isProjectSection}>
+    <StyledContainer $isProjectSection={$isProjectSection}>
       {/* {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>} */}
       <Bubble1
         initial={initialPositionForBubbles}
@@ -161,7 +159,9 @@ function Container({ children }: ContainerProps) {
         initial={initialPositionForBubbles}
         animate={getFinalPositions(path)?.finalPositionForBubble2}
         transition={{ duration: 3, type: "spring" }}
-      />
+      >
+        HELLO
+      </Bubble2>
       {children}
       <Toaster
         position="top-center"

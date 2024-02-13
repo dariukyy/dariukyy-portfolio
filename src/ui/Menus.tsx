@@ -10,7 +10,7 @@ const Menu = styled.div`
   justify-content: flex-end;
 `;
 
-const ButtonIcon = styled.button<{ openId: string }>`
+const ButtonIcon = styled.button<{ $openId: string }>`
   position: relative;
   background: none;
   border: none;
@@ -19,7 +19,7 @@ const ButtonIcon = styled.button<{ openId: string }>`
   transition: background-color 0.3s, border 0.3s, box-shadow 0.3s;
 
   ${(props) =>
-    props.openId === ""
+    props.$openId === ""
       ? "background-color: var(--color-grey-0);"
       : "background-color: var(--color-brand-100);"}
 
@@ -39,7 +39,7 @@ const ButtonIcon = styled.button<{ openId: string }>`
   }
 `;
 
-const StyledList = styled.ul<{ position: Position | null }>`
+const StyledList = styled.ul<{ $position: Position | null }>`
   position: absolute;
 
   /* top: 0;
@@ -50,8 +50,8 @@ const StyledList = styled.ul<{ position: Position | null }>`
   border-radius: var(--border-radius-md);
   overflow: hidden;
 
-  right: ${(props) => props.position!.x}px;
-  top: ${(props) => props.position!.y}px;
+  right: ${(props) => props.$position!.x}px;
+  top: ${(props) => props.$position!.y}px;
 `;
 
 const StyledButton = styled.button`
@@ -91,7 +91,7 @@ type Position = {
 };
 
 type MenusContextProps = {
-  openId: string;
+  $openId: string;
   close: () => void;
   open: (id: string) => void;
   position: { x: number; y: number } | null;
@@ -114,7 +114,7 @@ type ButtonProps = {
 const MenusContext = createContext<MenusContextProps | null>(null);
 
 function Menus({ children }: MenusProps) {
-  const [openId, setOpenId] = useState("");
+  const [$openId, setOpenId] = useState("");
   const [position, setPosition] = useState<Position | null>(null);
 
   const close = () => setOpenId("");
@@ -123,7 +123,7 @@ function Menus({ children }: MenusProps) {
   return (
     <MenusContext.Provider
       value={{
-        openId,
+        $openId,
         close,
         open,
         position,
@@ -136,7 +136,7 @@ function Menus({ children }: MenusProps) {
 }
 
 function Toggle({ id }: ToggleProps) {
-  const { open, openId, close, setPosition } = useContext(MenusContext)!;
+  const { open, $openId, close, setPosition } = useContext(MenusContext)!;
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.stopPropagation();
@@ -154,10 +154,10 @@ function Toggle({ id }: ToggleProps) {
       y: rect.y + rect.height,
     });
 
-    openId === "" || openId !== id ? open(id) : close();
+    $openId === "" || $openId !== id ? open(id) : close();
   }
   return (
-    <ButtonIcon openId={openId} onClick={handleClick}>
+    <ButtonIcon $openId={$openId} onClick={handleClick}>
       {<HiDownload />}
     </ButtonIcon>
   );
@@ -168,13 +168,13 @@ type ListProps = {
 };
 
 function List({ id, children }: ListProps) {
-  const { openId, position, close } = useContext(MenusContext)!;
+  const { $openId, position, close } = useContext(MenusContext)!;
   const ref = useOutsideClick(close, false);
 
-  if (openId !== id) return null;
+  if ($openId !== id) return null;
 
   return createPortal(
-    <StyledList onClick={close} ref={ref} position={position}>
+    <StyledList onClick={close} ref={ref} $position={position}>
       {children}
     </StyledList>,
     document.body

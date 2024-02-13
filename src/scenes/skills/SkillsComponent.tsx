@@ -8,7 +8,7 @@ function SkillsComponent() {
     <StyledSkillsComponent>
       <SkillsBox>
         {skills.map((skill) => (
-          <SkillItem skill={skill as SkillProp} />
+          <SkillItem key={skill.id} skill={skill as SkillProp} />
         ))}
       </SkillsBox>
     </StyledSkillsComponent>
