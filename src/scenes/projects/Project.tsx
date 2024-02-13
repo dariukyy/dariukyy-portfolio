@@ -61,7 +61,6 @@ function Project({
       initial={VariantsForCard.initial}
       animate={inView && VariantsForCard.animate(id)}
     >
-      <ProjectImage src={image} alt={alt} />
       <Content>
         <Title>
           {title}
@@ -83,6 +82,7 @@ function Project({
           <ProjectTagItem key={index}>{tag}</ProjectTagItem>
         ))}
       </ProjectBoxTags>
+      <ProjectImage src={image} alt={alt} />
     </ProjectBox>
   );
 }

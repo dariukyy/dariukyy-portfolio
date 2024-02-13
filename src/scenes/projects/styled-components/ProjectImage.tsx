@@ -25,19 +25,19 @@ const ProjectImage = styled.img`
 
   @media (max-width: 544px) {
     left: 50%;
-    bottom: 14.5%;
+    bottom: 14%;
     transform: translate(-50%, 21.5%);
     object-fit: cover;
-    object-position: top left;
-    width: 93%;
-    height: 26rem;
+    object-position: top center;
+    width: 80%;
+    height: 23rem;
     border-radius: var(--border-radius-lg);
     box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.22);
     filter: brightness(90%);
     border: 2px solid var(--color-grey-200);
 
     &:hover {
-      transform: translate(-50%, 21.5%) scale(1.03);
+      transform: translate(-50%, 21.5%) scale(1.2);
     }
   }
 `;

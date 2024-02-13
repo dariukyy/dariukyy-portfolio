@@ -5,7 +5,7 @@ const ProjectBox = styled(motion.li)`
   position: relative;
   width: 100%;
   min-height: 35rem;
-  max-width: 60rem;
+  max-width: 65rem;
   height: auto;
   background-color: var(--color-grey-100);
 
@@ -27,7 +27,7 @@ const ProjectBox = styled(motion.li)`
   @media (max-width: 544px) {
     gap: 1rem;
     justify-content: flex-start;
-    min-height: 53rem;
+    min-height: 56rem;
   }
 `;
 export default ProjectBox;

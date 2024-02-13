@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ProjectBoxTags = styled.ul`
-  width: 50%;
+  width: 48%;
   display: flex;
   gap: 0.7rem;
   flex-wrap: wrap;
@@ -13,7 +13,7 @@ export const ProjectBoxTags = styled.ul`
   font-weight: 400;
 
   @media (max-width: 883px) {
-    width: 46%;
+    width: 42%;
   }
 
   @media (max-width: 544px) {
