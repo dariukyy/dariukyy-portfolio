@@ -28,10 +28,10 @@ type PronectsDataProps = Project[];
 export const projectsData: PronectsDataProps = [
   {
     id: 1,
-    title: "Netflix Copy",
+    title: "Netflix Clone",
     alt: "Netflix Copy Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      "Enhanced with real-world movie data API. Utilizing Firebase for authentication and backend operations, this project delivers an immersive user experience, blending seamless design with dynamic content sourced from real movie databases.",
     tags: ["React", "Axios", "Firebase", "TailwindCSS"],
     image: NetflixImg,
     livePreview: "https://dariukyy-netflix-copy-react-tailwind.netlify.app/",
@@ -43,7 +43,7 @@ export const projectsData: PronectsDataProps = [
     title: "Dariukyy Fast Pizza",
     alt: "Fast Pizza App Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      "A dynamic pizza ordering app using React, Tailwind CSS and live pizza data from the API. Explore a seamless user interface, showcasing expertise in frontend development and UI design. Experience the fusion of modern web technologies and real-time data integration in this delicious project.",
     tags: ["React", "Redux", "React Router", "TailwindCSS"],
     image: FastReactPizzaImg,
     livePreview: "https://dariukyy-fast-pizza.vercel.app/",
@@ -55,7 +55,7 @@ export const projectsData: PronectsDataProps = [
     title: "Fitness App",
     alt: "Fitness App Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non.",
+      "A modern presentational fitness app. Dive into an immersive user experience with fluid transitions and dynamic UI elements, showcasing proficiency in frontend development and design.",
     tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
     image: FitnessImg,
     livePreview: "https://dariukyy-fitness-app.vercel.app/",
@@ -79,7 +79,7 @@ export const projectsData: PronectsDataProps = [
     title: "The Wild Oasis",
     alt: "The Wild Oasis Website ScreenShoot",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non. Onsectetur adipiscing elit.",
+      "A full-stack hotel management application, leveraging Supabase for backend operations and authentication, seamlessly integrates frontend and backend functionalities. A modern and efficient solution for hotel management, showcasing expertise in full-stack development and data-driven UI design.",
     tags: [
       "React",
       "Supabase",
