@@ -33,8 +33,7 @@ const ProjectImage = styled.img`
     width: 93%;
     height: 30rem;
     border-radius: var(--border-radius-lg);
-    box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.22);
-
+    filter: drop-shadow(0 4px 10px rgb(0 0 0 / 0.2));
     border: 2px solid var(--color-grey-200);
 
     &:hover {
