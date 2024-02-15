@@ -6,9 +6,7 @@ interface DarkModeContextType {
   toggleDarkMode: () => void;
 }
 
-const DarkModeContext = createContext<DarkModeContextType | undefined>(
-  undefined
-);
+const DarkModeContext = createContext<DarkModeContextType | null>(null);
 
 interface DarkModeProviderProps {
   children: ReactNode;
@@ -45,7 +43,7 @@ function DarkModeProvider({ children }: DarkModeProviderProps) {
 }
 
 function useDarkMode(): DarkModeContextType {
-  const context = useContext(DarkModeContext);
+  const context = useContext(DarkModeContext)!;
   if (context === undefined)
     throw new Error("DarkModeContext was used outside of DarkModeProvider");
 
