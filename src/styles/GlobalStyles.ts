@@ -37,16 +37,10 @@ const GlobalStyles = createGlobalStyle`
   --color-grey-800: #1f2937;
   --color-grey-900: #f9fafb;
 
-  --color-blue-100: #e0f2fe;
-  --color-blue-700: #0369a1;
+ 
   --color-green-100: #dcfce7;
   --color-green-100: #15803d;
-  --color-yellow-100: #fef9c3;
-  --color-yellow-700: #a16207;
-  --color-silver-100: #e5e7eb;
-  --color-silver-700: #374151;
-  --color-indigo-100: #e0e7ff;
-  --color-indigo-700: #4338ca;
+  
 
   --color-red-100: #fee2e2;
   --color-red-700: #b91c1c;
@@ -79,16 +73,10 @@ const GlobalStyles = createGlobalStyle`
 --color-grey-800: #f3f4f6;
 --color-grey-900: #f9fafb;
 
---color-blue-100: #075985;
---color-blue-700: #e0f2fe;
+
 --color-green-100: #166534;
 --color-green-700: #dcfce7;
---color-yellow-100: #854d0e;
---color-yellow-700: #fef9c3;
---color-silver-100: #374151;
---color-silver-700: #f3f4f6;
---color-indigo-100: #3730a3;
---color-indigo-700: #e0e7ff;
+
 
 --color-red-100: #fee2e2;
 --color-red-700: #922724;
@@ -175,16 +163,6 @@ input:disabled,textarea:disabled {
   background-color: var(--color-grey-200);
   color: var(--color-grey-500);
 }
-
-/* input:focus,
-button:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--color-brand-600);
-  outline-offset: -1px;
-} */
-
-
 
 
 /* Parent selector, finally 😃 */

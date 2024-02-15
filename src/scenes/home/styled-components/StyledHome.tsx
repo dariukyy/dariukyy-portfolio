@@ -4,7 +4,7 @@ import { device } from "../../../utils/breakpoints";
 const StyledHome = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center; // Changed from flex-start to space-around
+  justify-content: center;
   align-items: center;
 
   gap: 2.8rem;

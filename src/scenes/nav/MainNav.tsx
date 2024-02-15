@@ -9,7 +9,7 @@ const NavList = styled.ul`
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  /* align-items: */
+ 
 `;
 
 function MainNav() {

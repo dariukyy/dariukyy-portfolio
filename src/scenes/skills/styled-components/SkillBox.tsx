@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const SkillsBox = styled.ul`
   width: 100%;
-  /* height: 35%; */
   max-width: 75rem;
   z-index: 2;
   display: flex;

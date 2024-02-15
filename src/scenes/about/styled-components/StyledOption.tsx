@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { device } from "../../../utils/breakpoints";
 
 type StyledOptionProps = {
   $activeClass: boolean;
@@ -13,10 +12,6 @@ const StyledOption = styled.button<StyledOptionProps>`
   font-size: 1.6rem;
   padding: 0.6rem 1rem;
   transition: all 0.3s ease 0s;
-
-  /* @media ${device.mobile} {
-    font-size: 1.5rem;
-  } */
 
   &:hover {
     background-color: var(--color-brand-500);

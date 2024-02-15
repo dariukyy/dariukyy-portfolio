@@ -41,9 +41,6 @@ const ButtonIcon = styled.button<{ $openId: string }>`
 
 const StyledList = styled.ul<{ $position: Position | null }>`
   position: absolute;
-
-  /* top: 0;
-  right: 0; */
   z-index: 999;
   background-color: var(--color-grey-0);
   box-shadow: var(--shadow-md);

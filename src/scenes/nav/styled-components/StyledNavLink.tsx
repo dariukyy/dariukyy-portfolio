@@ -6,7 +6,7 @@ const StyledNavLink = styled(NavLink)`
   &:visited {
     display: flex;
     align-items: center;
-    /* justify-content: space-center; */
+
     gap: 1.2rem;
     width: 100%;
 
@@ -21,7 +21,6 @@ const StyledNavLink = styled(NavLink)`
     }
   }
 
-  /* This works because react-router places the active class on the active NavLink */
   &:hover,
   &:active,
   &.active:link,

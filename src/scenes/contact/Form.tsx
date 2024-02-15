@@ -39,7 +39,6 @@ const FormHeader = styled(motion.h1)`
 
   @media ${device.mobile} {
     font-size: 1.5rem;
-    /* margin-bottom: 1rem; */
   }
 `;
 
