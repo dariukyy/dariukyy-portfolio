@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { device } from "../utils/breakpoints";
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-// import useMediaQuery from "../hooks/useMediaQuery";
 import { Toaster } from "react-hot-toast";
+
+import { device } from "../utils/breakpoints";
 import useSidebarWidth from "../hooks/useSideBarWidth";
+import { getFinalPositions } from "../helpers/getFinalPositions";
 
 const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   position: relative;
@@ -98,59 +99,8 @@ function Container({ children }: ContainerProps) {
 
   const initialPositionForBubbles = { x: 0, y: 0 };
 
-  function getFinalPositions(path: string) {
-    if (path === "/about") {
-      return {
-        finalPositionForBubble1: {
-          top: "18%",
-          right: "0%",
-          bottom: "20%",
-          left: "-70%",
-        },
-        finalPositionForBubble2: {
-          top: "-22%",
-          right: "0%",
-          bottom: "0%",
-          left: "18%",
-        },
-      };
-    } else if (path === "/contact") {
-      return {
-        finalPositionForBubble1: {
-          top: "16%",
-          right: "0%",
-          bottom: "20%",
-          left: "-73%",
-        },
-        finalPositionForBubble2: {
-          top: "-26%",
-          right: "0%",
-          bottom: "0%",
-          left: "10%",
-        },
-      };
-    } else if (path === "/skills") {
-      return {
-        finalPositionForBubble1: {
-          top: "8%",
-          right: "0%",
-          bottom: "20%",
-          left: "-46%",
-        },
-        finalPositionForBubble2: {
-          top: "-20%",
-          right: "0%",
-          bottom: "0%",
-          left: "31%",
-        },
-      };
-    }
-  }
-  // -20% 0% 0% 31
-  // 18% 0% 20% -70%
   return (
     <StyledContainer $isProjectSection={$isProjectSection}>
-      {/* {!isMobile && path !== "/home" && <Header>{HeaderName}</Header>} */}
       <Bubble1
         initial={initialPositionForBubbles}
         animate={getFinalPositions(path)?.finalPositionForBubble1}
