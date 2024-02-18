@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../utils/breakpoints";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const StyledHeader = styled(motion.div)`
   display: flex;
@@ -29,6 +30,7 @@ const StyledHeader = styled(motion.div)`
 function Header() {
   const location = useLocation();
   const path = location.pathname;
+  const { t } = useTranslation();
 
   const headerString = path.slice(1).charAt(0).toUpperCase() + path.slice(2);
 
@@ -37,7 +39,7 @@ function Header() {
       initial={{ y: -100, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
     >
-      <h1>{headerString}</h1>
+      <h1>{t(headerString)}</h1>
     </StyledHeader>
   );
 }

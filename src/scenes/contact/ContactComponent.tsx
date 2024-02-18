@@ -15,6 +15,7 @@ import TextArea from "./TextArea";
 import { capitalizeFirstLetter } from "../../helpers/capitalizeFirstLetter";
 import SpinnerMini from "../../ui/SpinnerMini";
 import Button from "../../ui/Button";
+import { useTranslation } from "react-i18next";
 
 // Styled components
 const StyledContact = styled.section`
@@ -55,6 +56,7 @@ const PUBLIC_KEY = import.meta.env.VITE_APP_PUBLIC_KEY;
 
 // Component
 function ContactComponent() {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -74,14 +76,16 @@ function ContactComponent() {
         .then(
           () => {
             toast.success(
-              `Message sent successfully, ${capitalizeFirstLetter(data.name)}!`
+              `${t("toast-success-message")} ${capitalizeFirstLetter(
+                data.name
+              )}!`
             );
             setIsLoading(false);
             reset();
           },
-          (error) => {
-            console.log("FAILED...", error.text);
-            toast.error("Message not sent. Please try again later!");
+          () => {
+            const errorMessage = t("toast-error-message");
+            toast.error(errorMessage);
           }
         );
     }
@@ -112,7 +116,7 @@ function ContactComponent() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2 }}
         >
-          Let's Collaborate!
+          {t("contact-form-header")}
         </FormHeader>
         <FormGroup>
           <motion.div
@@ -125,7 +129,7 @@ function ContactComponent() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.35 }}
               type="text"
-              placeholder="Name"
+              placeholder={t("input-name")}
               id="name"
               disabled={isLoading}
               {...register("name", { required: true, maxLength: 100 })}
@@ -135,8 +139,8 @@ function ContactComponent() {
           {errors.name && (
             <ErrorMessage>
               {errors.name?.type === "required"
-                ? "This field is required!"
-                : "Max length is 100 characters!"}
+                ? t("input-field-required")
+                : t("input-field-max-length")}
             </ErrorMessage>
           )}
         </FormGroup>
@@ -151,7 +155,7 @@ function ContactComponent() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.55 }}
               type="text"
-              placeholder="Email"
+              placeholder={t("input-email")}
               id="email"
               disabled={isLoading}
               {...register("email", {
@@ -164,8 +168,8 @@ function ContactComponent() {
           {errors.email && (
             <ErrorMessage>
               {errors.email?.type === "required"
-                ? "This field is required!"
-                : "Please write correct email!"}
+                ? t("input-field-required")
+                : t("input-field-email")}
             </ErrorMessage>
           )}
         </FormGroup>
@@ -180,7 +184,7 @@ function ContactComponent() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.75 }}
               rows={4}
-              placeholder="Message"
+              placeholder={t("input-message")}
               id="message"
               disabled={isLoading}
               {...register("message", { required: true, maxLength: 100 })}
@@ -190,8 +194,8 @@ function ContactComponent() {
           {errors.message && (
             <ErrorMessage>
               {errors.message?.type === "required"
-                ? "This field is required!"
-                : "Max length is 100 characters!"}
+                ? t("input-field-required")
+                : t("input-field-max-length")}
             </ErrorMessage>
           )}
         </FormGroup>
@@ -202,7 +206,7 @@ function ContactComponent() {
           style={{ marginBottom: "2rem" }}
         >
           <Button disabled={isLoading} size="large">
-            {isLoading ? <SpinnerMini /> : "Send Message"}
+            {isLoading ? <SpinnerMini /> : t("contact-send-button")}
           </Button>
         </motion.div>
       </Form>

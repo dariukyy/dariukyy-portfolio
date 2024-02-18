@@ -6,14 +6,13 @@ const StyledNavLink = styled(NavLink)`
   &:visited {
     display: flex;
     align-items: center;
-
     gap: 1.2rem;
     width: 100%;
 
     color: var(--color-grey-600);
     font-size: 1.6rem;
     font-weight: 500;
-    padding: 1.2rem 2.4rem;
+    padding: 1.2rem 2rem;
     transition: all 0.3s;
 
     @media (max-width: 768px) {
@@ -35,8 +34,8 @@ const StyledNavLink = styled(NavLink)`
   }
 
   & svg {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: var(--color-grey-400);
     transition: all 0.3s;
   }
