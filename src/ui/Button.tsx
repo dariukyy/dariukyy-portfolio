@@ -31,11 +31,11 @@ const sizes = {
     padding: none;
   `,
   large: css`
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 1.3rem 2.5rem;
     font-weight: 500;
     border-radius: 60px;
-    width: 14rem;
+    width: 17rem;
   `,
 };
 

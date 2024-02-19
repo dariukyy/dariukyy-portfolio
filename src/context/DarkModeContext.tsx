@@ -1,9 +1,18 @@
-import { type ReactNode, createContext, useContext, useEffect } from "react";
+import {
+  type ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
+import i18n from "../i18next";
 
 interface DarkModeContextType {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
+  englishLanguage: boolean;
+  toggleLanguage: () => void;
 }
 
 const DarkModeContext = createContext<DarkModeContextType | null>(null);
@@ -13,6 +22,8 @@ interface DarkModeProviderProps {
 }
 
 function DarkModeProvider({ children }: DarkModeProviderProps) {
+  const [englishLanguage, setEnglishLanguage] = useState<boolean>(true);
+
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     window.matchMedia("(prefers-color-scheme: dark)").matches,
     "isDarkMode"
@@ -31,12 +42,27 @@ function DarkModeProvider({ children }: DarkModeProviderProps) {
     [isDarkMode]
   );
 
+  useEffect(() => {
+    i18n.changeLanguage(englishLanguage ? "en" : "lt");
+  }, [englishLanguage]);
+
   function toggleDarkMode() {
     setIsDarkMode((isDark: boolean) => !isDark);
   }
 
+  function toggleLanguage() {
+    setEnglishLanguage((englishLanguage: boolean) => !englishLanguage);
+  }
+
   return (
-    <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+    <DarkModeContext.Provider
+      value={{
+        isDarkMode,
+        toggleDarkMode,
+        englishLanguage,
+        toggleLanguage,
+      }}
+    >
       {children}
     </DarkModeContext.Provider>
   );

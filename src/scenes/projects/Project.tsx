@@ -11,33 +11,35 @@ import Description from "./styled-components/Description";
 import ResponsiveComponent from "./styled-components/ResponsiveComponent";
 
 import { ProjectBoxTags, ProjectTagItem } from "./styled-components/Tags";
+import { useTranslation } from "react-i18next";
 
 type ProjectProps = {
-  title: string;
-  description: string;
   tags: string[];
   image: string;
   livePreview: string;
   codePreview: string;
   alt: string;
-  responsive: { isResponsive: boolean; responsiveText: string };
+  responsive: { isResponsive: boolean; responsiveText?: string };
   id: number;
 };
 
 function Project({
-  title,
-  description,
   tags,
   image,
   livePreview,
   codePreview,
   alt,
-  responsive,
+  responsive: { isResponsive },
   id,
 }: ProjectProps) {
   const [ref, inView] = useInView({
     threshold: 0.3,
   });
+  const { t } = useTranslation();
+
+  const translatedTitle = t(`projects.${id}.title`);
+  const translatedDescription = t(`projects.${id}.description`);
+  const translatedResponsiveText = t(`projects.${id}.responsiveText`);
 
   const VariantsForCard = {
     initial: {
@@ -63,11 +65,11 @@ function Project({
     >
       <Content>
         <Title>
-          {title}
+          {translatedTitle}
           <ProjectInfoBox>
-            <ResponsiveComponent isResponsive={responsive.isResponsive}>
+            <ResponsiveComponent $isResponsive={isResponsive}>
               <FaRegCircleCheck />
-              <span>{responsive.responsiveText}</span>
+              <span>{translatedResponsiveText}</span>
             </ResponsiveComponent>
             <IconsComponent
               linkForLivePreview={livePreview}
@@ -75,7 +77,7 @@ function Project({
             />
           </ProjectInfoBox>
         </Title>
-        <Description>{description}</Description>
+        <Description>{translatedDescription}</Description>
       </Content>
       <ProjectBoxTags>
         {tags.map((tag, index) => (

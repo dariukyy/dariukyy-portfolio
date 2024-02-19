@@ -4,13 +4,12 @@ import Paragraph from "../../ui/Paragraph";
 import { motion } from "framer-motion";
 import BrandHeader from "../../ui/BrandHeader";
 import StyledHome from "./styled-components/StyledHome";
+import { useTranslation } from "react-i18next";
 
 const NAME = "Darius Parfijanovičius";
-const HEADER = "My name is,";
-const DESCRIPTION =
-  "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passion for learning and building innovative solutions. I specialize with technologies like React, Redux, TypeScript, styled-components and TailwindCSS.";
 
 function HomeComponent() {
+  const { t } = useTranslation();
   return (
     <StyledHome>
       <motion.img
@@ -19,7 +18,7 @@ function HomeComponent() {
         transition={{ delay: 0.1 }}
         src={MyPhoto}
       />
-      <BrandHeader>{HEADER}</BrandHeader>
+      <BrandHeader>{t("home-my-name-is")}</BrandHeader>
       <motion.h1
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -36,7 +35,7 @@ function HomeComponent() {
           delay: 0.2,
         }}
       >
-        {DESCRIPTION}
+        {t("home-description")}
       </Paragraph>
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -48,7 +47,8 @@ function HomeComponent() {
         }}
       >
         <Button to="/contact" size="large">
-          Contact me <span style={{ marginLeft: "0.3rem" }}>&rarr;</span>
+          {t("home-contact-me")}{" "}
+          <span style={{ marginLeft: "0.3rem" }}>&rarr;</span>
         </Button>
       </motion.div>
     </StyledHome>

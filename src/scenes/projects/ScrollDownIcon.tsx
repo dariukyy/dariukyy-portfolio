@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { CgMouse } from "react-icons/cg";
 import styled from "styled-components";
 
@@ -28,6 +29,7 @@ const ScrollDownComponent = styled(motion.div)`
 `;
 
 function ScrollDownIcon() {
+  const { t } = useTranslation();
   return (
     <ScrollDownComponent
       animate={{
@@ -54,7 +56,7 @@ function ScrollDownIcon() {
       >
         <CgMouse />
       </motion.div>
-      <p>Scroll down</p>
+      <p>{t("scroll-down")}</p>
     </ScrollDownComponent>
   );
 }
