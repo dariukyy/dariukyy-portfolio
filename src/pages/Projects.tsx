@@ -4,6 +4,7 @@ import ProjectsContainer from "../scenes/projects/Projects";
 
 import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ScrollComponent = styled.div`
   width: 100%;
@@ -49,6 +50,7 @@ const Header = styled(motion.div)`
 `;
 
 function Projects() {
+  const { t } = useTranslation();
   return (
     <ScrollComponent>
       <StyledProjects>
@@ -56,7 +58,7 @@ function Projects() {
           initial={{ y: -100, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
         >
-          <h1>Projects</h1>
+          <h1>{t("Projects")}</h1>
           <ScrollDownIcon />
         </Header>
         <ProjectsContainer />

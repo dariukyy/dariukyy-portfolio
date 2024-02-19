@@ -4,10 +4,18 @@ import DescriptionBox from "./styled-components/DescriptionBox";
 import OptionsContainer from "./styled-components/OptionsContainer";
 import OptionItem from "./OptionItem";
 import { aboutData } from "../../data/about";
+import { useTranslation } from "react-i18next";
 
 function AboutComponent() {
   const [active, setActive] = useState(aboutData[0].id);
-  const activeItem = aboutData.find((item) => item.id === active);
+
+  const { t } = useTranslation();
+
+  const translatedAboutData = aboutData.map((item) => ({
+    ...item,
+    option: t(item.option),
+    description: t(item.description),
+  }));
 
   return (
     <StyledAbout>
@@ -16,7 +24,7 @@ function AboutComponent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: "spring", delay: 0.3 }}
       >
-        {aboutData.map((item) => (
+        {translatedAboutData.map((item) => (
           <OptionItem
             item={item}
             key={item.id}
@@ -35,7 +43,7 @@ function AboutComponent() {
           delay: 0.2,
         }}
       >
-        {activeItem?.description}
+        {translatedAboutData.find((item) => item.id === active)?.description}
       </DescriptionBox>
     </StyledAbout>
   );
