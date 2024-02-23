@@ -15,7 +15,6 @@
     "gsap": "^3.12.5",
     "i18next": "^23.9.0",
     "react": "^18.2.0",
-    "react-canvas-confetti": "^2.0.5",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
     "react-hot-toast": "^2.4.1",
