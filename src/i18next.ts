@@ -26,7 +26,7 @@ i18n.use(initReactI18next).init({
         "scroll-down": "Scroll Down",
 
         "home-description":
-          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passion for learning and building innovative solutions. I specialize with technologies like React, Redux, TypeScript, styled-components and TailwindCSS.",
+          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React, Redux, TypeScript, styled-components, and TailwindCSS.",
         "home-contact-me": "Contact Me",
         "about-about-me": "About Me",
         "about-personal-bio": "Personal Bio",
