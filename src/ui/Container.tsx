@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Toaster } from "react-hot-toast";
 
 import { device } from "../utils/breakpoints";
-import useSidebarWidth from "../hooks/useSideBarWidth";
 import { getFinalPositions } from "../helpers/getFinalPositions";
+import { Bubble1, Bubble2 } from "./BackgroundBubbles";
+import ToasterComponent from "./ToasterComponent";
 
 const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   position: relative;
@@ -60,39 +59,11 @@ const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   }
 `;
 
-const Bubble1 = styled(motion.div)`
-  position: absolute;
-  background-color: var(--color-brand-200);
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  clip-path: circle(6.9% at 87.3% 71.9%);
-  z-index: 1;
-`;
-
-const Bubble2 = styled(motion.div)`
-  height: 100%;
-  width: 100%;
-  background: var(--color-brand-200);
-  position: absolute;
-  top: 0;
-  right: 0;
-  clip-path: circle(8.9% at 14.3% 36.9%);
-  z-index: 1;
-  overflow: hidden;
-
-  @media ${device.mobile} {
-    clip-path: circle(7.9% at 15.3% 36.9%);
-  }
-`;
-
 type ContainerProps = {
   children: ReactNode;
 };
 
 function Container({ children }: ContainerProps) {
-  const sideBarWidth = useSidebarWidth();
   const { pathname: path } = useLocation();
 
   const $isProjectSection = path === "/projects";
@@ -114,28 +85,7 @@ function Container({ children }: ContainerProps) {
         HELLO
       </Bubble2>
       {children}
-      <Toaster
-        position="top-center"
-        gutter={12}
-        containerStyle={{
-          marginLeft: sideBarWidth,
-        }}
-        toastOptions={{
-          success: {
-            duration: 3000,
-          },
-          error: {
-            duration: 5000,
-          },
-          style: {
-            fontSize: "16px",
-            maxWidth: "500px",
-            padding: "16px 24px",
-            backgroundColor: "var(--color-grey-0)",
-            color: "var(--color-grey-700)",
-          },
-        }}
-      />
+      <ToasterComponent />
     </StyledContainer>
   );
 }
