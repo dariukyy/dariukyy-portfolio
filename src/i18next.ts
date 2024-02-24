@@ -103,7 +103,7 @@ i18n.use(initReactI18next).init({
 
         "home-my-name-is": "Mano vardas yra,",
         "home-description":
-          "Esu jaunesnysis frontend kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Redux, TypeScript, styled-components ir TailwindCSS.",
+          "Esu jaunesnysis front-end kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Redux, TypeScript, styled-components ir TailwindCSS.",
         "home-contact-me": "Bendradarbiaukime",
         "about-about-me": "Apie mane",
         "about-personal-bio": "Biografija",
