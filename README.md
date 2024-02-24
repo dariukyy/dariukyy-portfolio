@@ -37,4 +37,4 @@ Feel free to reach out to me via GitHub or LinkedIn for any inquiries or collabo
 
 ## Get Started
 
-To explore my portfolio, simply visit the deployed website [https://dariukyy-portfolio.vercel.app/](https://dariukyy-portfolio.vercel.app/) (replace with your deployment link). Don't forget to toggle the dark mode for a different viewing experience!
+To explore my portfolio, simply visit the deployed website [https://dariukyy-portfolio.vercel.app/](https://dariukyy-portfolio.vercel.app/). Don't forget to toggle the dark mode for a different viewing experience!
