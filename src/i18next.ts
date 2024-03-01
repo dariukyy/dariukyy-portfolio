@@ -26,14 +26,14 @@ i18n.use(initReactI18next).init({
         "scroll-down": "Scroll Down",
 
         "home-description":
-          "I'm a junior front-end developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React, Redux, TypeScript, styled-components, and TailwindCSS.",
+          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React, Redux, TypeScript, styled-components, and TailwindCSS.",
         "home-contact-me": "Contact Me",
         "about-about-me": "About Me",
         "about-personal-bio": "Personal Bio",
         "about-about-me-description":
           "Hello! My name is Darius, I am a self-taught frontend developer. I am committed to continuous learning and growth. Moving on from my previous job, I decided to focus all my energy on programming to deepen my understanding of the field and further develop my technical skills. I believe that continuous improvement is the key to success, so I invest not only time but also passion and effort into my self-development.",
         "about-personal-bio-description":
-          "I am a 26 years old energetic and happy father of a girl. I live in Vilnius. From 2018 until autumn 2023, I served in the Lithuanian army in a mechanized infantry battalion. During these years, I not only gained a strong character and developed leadership skills but also realized that my calling lies in another field - programming. So, while still serving as a soldier, in the summer of 2022, I began my journey as a front-end developer.",
+          "I am a 26 years old energetic and happy father of a girl. I live in Vilnius. From 2018 until autumn 2023, I served in the Lithuanian army in a mechanized infantry battalion. During these years, I not only gained a strong character and developed leadership skills but also realized that my calling lies in another field - programming. So, while still serving as a soldier, in the summer of 2022, I began my journey as a frontend developer.",
         "contact-form-header": "Let's Collaborate!",
         "contact-name-input-placeholder": "Name",
         "contact-email-input-placeholder": "Email",
@@ -103,7 +103,7 @@ i18n.use(initReactI18next).init({
 
         "home-my-name-is": "Mano vardas yra,",
         "home-description":
-          "Esu jaunesnysis front-end kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Redux, TypeScript, styled-components ir TailwindCSS.",
+          "Esu jaunesnysis frontend kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Redux, TypeScript, styled-components ir TailwindCSS.",
         "home-contact-me": "Bendradarbiaukime",
         "about-about-me": "Apie mane",
         "about-personal-bio": "Biografija",
