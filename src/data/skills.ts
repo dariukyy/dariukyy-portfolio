@@ -1,5 +1,12 @@
 import { IconType } from "react-icons";
-import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaSass } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGitAlt,
+  FaSass,
+  FaGithub,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiSupabaseFill } from "react-icons/ri";
 import {
@@ -45,28 +52,28 @@ export const skills: SkillsProps = [
   // },
 
   { skill: "Git", icon: FaGitAlt, id: 11, color: "#f34f29" },
-
-  { skill: "Firebase", icon: SiFirebase, id: 12, color: "#ffca28" },
-  { skill: "Supabase", icon: RiSupabaseFill, id: 13, color: "#33b382" },
+  { skill: "Github", icon: FaGithub, id: 12 },
+  { skill: "Firebase", icon: SiFirebase, id: 13, color: "#ffca28" },
+  { skill: "Supabase", icon: RiSupabaseFill, id: 14, color: "#33b382" },
   {
     skill: "Framer Motion",
     icon: TbBrandFramerMotion,
-    id: 14,
+    id: 15,
     color: "#ff00f7",
   },
-  { skill: "Tailwind CSS", icon: SiTailwindcss, id: 15, color: "#38b2ac" },
+  { skill: "Tailwind CSS", icon: SiTailwindcss, id: 16, color: "#38b2ac" },
   {
     skill: "CSS Modules",
     icon: SiCssmodules,
-    id: 16,
+    id: 17,
     fill: "var(--color-grey-800)",
     transition: "all 0.3s",
   },
   {
     skill: "Styled Components",
     icon: SiStyledcomponents,
-    id: 17,
+    id: 18,
     color: "#db7093",
   },
-  { skill: "Sass", icon: FaSass, id: 18, color: "#cc6699" },
+  { skill: "Sass", icon: FaSass, id: 19, color: "#cc6699" },
 ];
