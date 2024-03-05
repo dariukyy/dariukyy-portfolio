@@ -26,7 +26,7 @@ i18n.use(initReactI18next).init({
         "scroll-down": "Scroll Down",
 
         "home-description":
-          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React, Redux, TypeScript, styled-components, and TailwindCSS.",
+          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React and TypeScript",
         "home-contact-me": "Contact Me",
         "about-about-me": "About Me",
         "about-personal-bio": "Personal Bio",
@@ -103,7 +103,7 @@ i18n.use(initReactI18next).init({
 
         "home-my-name-is": "Mano vardas yra,",
         "home-description":
-          "Esu jaunesnysis frontend kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Redux, TypeScript, styled-components ir TailwindCSS.",
+          "Esu jaunesnysis frontend kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React ir TypeScript",
         "home-contact-me": "Bendradarbiaukime",
         "about-about-me": "Apie mane",
         "about-personal-bio": "Biografija",
