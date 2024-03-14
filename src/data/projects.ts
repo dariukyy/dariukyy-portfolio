@@ -8,6 +8,7 @@ import NatoursImg from "/images/natours-app.jpeg";
 import TheWildOasisImg from "/images/the-wild-oasis-app.jpeg";
 import FastReactPizzaImg from "/images/fast-react-pizza-app.jpeg";
 import WorldWiseImg from "/images/world-wise-app.jpeg";
+import WeatherImg from "/images/weather-app.jpeg";
 
 type ResponsiveProps = { isResponsive: boolean; responsiveText: string };
 
@@ -28,6 +29,27 @@ type PronectsDataProps = Project[];
 export const projectsData: PronectsDataProps = [
   {
     id: 1,
+    title: "Dariukyy Weather App",
+    alt: "Weather App Website ScreenShoot",
+    description:
+      "Revolutionize your weather experience with our personal weather app. Powered by Next.js, TypeScript, TailwindCSS, and cutting-edge technologies like Tremor and StepZen, it delivers hyper-personalized forecasts. Using GraphQL and Apollo Client for lightning-fast performance, alongside OpenAI API for advanced AI insights.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Tremor",
+      "StepZen",
+      "GraphQL",
+      "Apollo Client",
+      "OpenAI API",
+    ],
+    image: WeatherImg,
+    livePreview: "https://dariukyy-weather-app.vercel.app/",
+    codePreview: "https://github.com/dariukyy/weather-app",
+    responsive: { isResponsive: true, responsiveText: "Responsive" },
+  },
+  {
+    id: 2,
     title: "Netflix Clone",
     alt: "Netflix Copy Website ScreenShoot",
     description:
@@ -39,7 +61,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 2,
+    id: 3,
     title: "Dariukyy Fast Pizza",
     alt: "Fast Pizza App Website ScreenShoot",
     description:
@@ -51,7 +73,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 3,
+    id: 4,
     title: "Fitness App",
     alt: "Fitness App Website ScreenShoot",
     description:
@@ -63,7 +85,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 4,
+    id: 5,
     title: "World Wise",
     alt: "World Wise App Website ScreenShoot",
     description:
@@ -75,7 +97,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 5,
+    id: 6,
     title: "The Wild Oasis",
     alt: "The Wild Oasis Website ScreenShoot",
     description:
@@ -95,7 +117,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 6,
+    id: 7,
     title: "Natours",
     alt: "Natours Website ScreenShoot",
     description:
