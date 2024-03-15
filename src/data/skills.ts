@@ -7,11 +7,14 @@ import {
   FaSass,
   FaGithub,
 } from "react-icons/fa";
+import { GrGraphQl } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiSupabaseFill } from "react-icons/ri";
 import {
+  SiApollographql,
   SiCssmodules,
   SiFirebase,
+  SiNextdotjs,
   // SiJest,
   SiReactquery,
   SiReactrouter,
@@ -39,10 +42,23 @@ export const skills: SkillsProps = [
   { skill: "CSS", icon: FaCss3Alt, id: 2, color: "#264de4" },
   { skill: "JavaScript", icon: IoLogoJavascript, color: "#f0db4f", id: 3 },
   { skill: "TypeScript", icon: SiTypescript, id: 4, color: "#007acc" },
+
+  {
+    skill: "Next.js",
+    icon: SiNextdotjs,
+    id: 9,
+  },
   { skill: "React", icon: FaReact, id: 5, color: "#61dafb" },
   { skill: "Redux", icon: SiRedux, id: 6, color: "#764abc" },
   { skill: "React Query", icon: SiReactquery, id: 7, color: "#ff4154" },
   { skill: "React Router", icon: SiReactrouter, id: 8, color: "#ca4245" },
+  { skill: "GraphQL", icon: GrGraphQl, id: 9, color: "#E10098" },
+  {
+    skill: "Apollo Client",
+    icon: SiApollographql,
+    id: 9,
+  },
+
   // { skill: "Jest", icon: SiJest, id: 9, color: "#99425b" },
   // {
   //   skill: "React Testing Library",
@@ -55,6 +71,7 @@ export const skills: SkillsProps = [
   { skill: "Github", icon: FaGithub, id: 12 },
   { skill: "Firebase", icon: SiFirebase, id: 13, color: "#ffca28" },
   { skill: "Supabase", icon: RiSupabaseFill, id: 14, color: "#33b382" },
+
   {
     skill: "Framer Motion",
     icon: TbBrandFramerMotion,
@@ -66,8 +83,6 @@ export const skills: SkillsProps = [
     skill: "CSS Modules",
     icon: SiCssmodules,
     id: 17,
-    fill: "var(--color-grey-800)",
-    transition: "all 0.3s",
   },
   {
     skill: "Styled Components",
