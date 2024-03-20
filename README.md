@@ -33,7 +33,7 @@ This portfolio showcases a collection of modern web development projects built u
 - GitHub: [https://github.com/dariukyy](https://github.com/dariukyy)
 - LinkedIn: [https://www.linkedin.com/in/darius-parfijanovi%C4%8Dius-705290244/](https://www.linkedin.com/in/darius-parfijanovi%C4%8Dius-705290244/)
 
-Feel free to reach out to me via GitHub or LinkedIn for any inquiries or collaboration opportunities.
+Feel free to reach out to me via GitHub or LinkedIn, for any inquiries or collaboration opportunities.
 
 ## Get Started
 
