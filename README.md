@@ -25,7 +25,7 @@ This portfolio showcases a collection of modern web development projects built u
 - Responsive design for seamless viewing on all devices.
 - Dark mode for improved user experience, especially in low-light environments.
 - Language translation functionality from EN to LT.
-- Easy navigation to explore different projects.
+- Easy navigation to explore different projects .
 - Contact form powered by EmailJS for convenient communication, and validate with react-hook-form.
 
 ## Contact Information
