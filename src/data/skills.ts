@@ -15,13 +15,13 @@ import {
   SiCssmodules,
   SiFirebase,
   SiNextdotjs,
-  // SiJest,
+
   SiReactquery,
   SiReactrouter,
   SiRedux,
   SiStyledcomponents,
   SiTailwindcss,
-  // SiTestinglibrary,
+
   SiTypescript,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -58,15 +58,6 @@ export const skills: SkillsProps = [
     icon: SiApollographql,
     id: 9,
   },
-
-  // { skill: "Jest", icon: SiJest, id: 9, color: "#99425b" },
-  // {
-  //   skill: "React Testing Library",
-  //   icon: SiTestinglibrary,
-  //   id: 10,
-  //   color: "#ef4444",
-  // },
-
   { skill: "Git", icon: FaGitAlt, id: 11, color: "#f34f29" },
   { skill: "Github", icon: FaGithub, id: 12 },
   { skill: "Firebase", icon: SiFirebase, id: 13, color: "#ffca28" },
