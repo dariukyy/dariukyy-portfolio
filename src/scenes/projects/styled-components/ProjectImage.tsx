@@ -28,8 +28,8 @@ const ProjectImage = styled.img`
     left: 50%;
     bottom: 14%;
     transform: translate(-50%, 21.5%);
-    object-fit: cover;
-    object-position: top center;
+    /* object-fit: cover; */
+    /* object-position: top center; */
     width: 93%;
     height: 30rem;
     border-radius: var(--border-radius-lg);
