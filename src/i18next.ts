@@ -40,6 +40,12 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Message",
         "contact-send-button": "Send Message",
         projects: {
+          8: {
+            title: "Employee table",
+            description:
+            "An employee management system that tracks the login status of employees and the validity of their credentials. This system ensures that all employees receive the necessary certifications with real-time information, improving overall workforce management and compliance.",
+            responsiveText: "Only Desktop",
+          },
           1: {
             title: "Dariukyy Weather App",
             description:
@@ -123,6 +129,12 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Žinutė",
         "contact-send-button": "Siųsti žinutę",
         projects: {
+          8: {
+            title: "Darbuotojų lentelė",
+            description:
+              "Darbuotojų valdymo sistemą, kuri seka darbuotojų prisijungimo būseną ir jų pažymų galiojimą. Ši sistema užtikrina, kad visi darbuotojai gautų reikiamas pažymas realiuoju laiku pateikta informacija, pagerindama bendrą darbo jėgos valdymą ir atitikimą.",
+            responsiveText: "Tik kompiuteriams",
+          },
           1: {
             title: "Dariukyy Orų Svetainė",
             description:
