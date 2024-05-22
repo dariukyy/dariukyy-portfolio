@@ -40,49 +40,49 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Message",
         "contact-send-button": "Send Message",
         projects: {
-          8: {
+          1: {
             title: "Employee table",
             description:
-            "An employee management system that tracks the login status of employees and the validity of their credentials. This system ensures that all employees receive the necessary certifications with real-time information, improving overall workforce management and compliance.",
+              "An employee management system that tracks the login status of employees and the validity of their credentials. This system ensures that all employees receive the necessary certifications with real-time information, improving overall workforce management and compliance.",
             responsiveText: "Only Desktop",
           },
-          1: {
+          2: {
             title: "Dariukyy Weather App",
             description:
               "Revolutionize your weather experience. Powered by Next.js, TypeScript, TailwindCSS, and cutting-edge technologies like Tremor and StepZen, it delivers hyper-personalized forecasts. Using GraphQL and Apollo Client for lightning-fast performance, alongside OpenAI API for advanced AI insights.",
             responsiveText: "Responsive",
           },
-          2: {
+          3: {
             title: "Netflix Clone",
             description:
               "A Netflix clone, enhanced with real-world movie data API. Utilizing Firebase for authentication and backend operations, this project delivers an immersive user experience, blending seamless design with dynamic content sourced from real movie databases.",
             responsiveText: "Responsive",
           },
-          3: {
+          4: {
             title: "Dariukyy Fast Pizza",
             description:
               "A dynamic pizza ordering app using live pizza data from the API. Explore a seamless user interface, showcasing expertise in frontend development and UI design. Modern web technologies and real-time data integration.",
             responsiveText: "Responsive",
           },
-          4: {
+          5: {
             title: "Fitness App",
             description:
               "A modern fitness app with React, TypeScript, Tailwind CSS, and Framer Motion for captivating animations. Dive into an immersive user experience with fluid transitions and dynamic UI elements, showcasing proficiency in frontend development and design.",
             responsiveText: "Responsive",
           },
-          5: {
+          6: {
             title: "World Wise",
             description:
               "A real-world project integrating city data API into a Leaflet map library, enabling users to track their travels by registering visited cities. Experience interactive map interface, demonstrating proficiency in frontend development and API integration. Explore the real-world data and user engagement in this dynamic travel companion.",
             responsiveText: "Only Desktop",
           },
-          6: {
+          7: {
             title: "The Wild Oasis",
             description:
               "A full-stack hotel management application, leveraging Supabase for backend operations, CRUD, and authentication, seamlessly integrates frontend and backend functionalities and data-driven UI design.",
             responsiveText: "Only Desktop",
           },
-          7: {
+          8: {
             title: "Natours",
             description:
               "Designed an eye-catching website filled with captivating animations using Sass. Immerse yourself in a visually stunning experience as animations bring content to life, showcasing creativity and expertise in frontend development. Explore the power of Sass to streamline styling and create dynamic web experiences",
@@ -129,49 +129,49 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Žinutė",
         "contact-send-button": "Siųsti žinutę",
         projects: {
-          8: {
+          1: {
             title: "Darbuotojų lentelė",
             description:
               "Darbuotojų valdymo sistemą, kuri seka darbuotojų prisijungimo būseną ir jų pažymų galiojimą. Ši sistema užtikrina, kad visi darbuotojai gautų reikiamas pažymas realiuoju laiku pateikta informacija, pagerindama bendrą darbo jėgos valdymą ir atitikimą.",
             responsiveText: "Tik kompiuteriams",
           },
-          1: {
+          2: {
             title: "Dariukyy Orų Svetainė",
             description:
               "Pakeiskite orų patirtį. Naudojant Next.js, TypeScript, TailwindCSS ir pažangiausias technologijas, pvz., „Tremor“ ir „StepZen“, jis teikia itin suasmenintas prognozes. Naudojant GraphQL ir Apollo Client žaibiškam veikimui, kartu su OpenAI API pažangioms AI įžvalgoms.",
             responsiveText: "Visiems įrenginiams",
           },
-          2: {
+          3: {
             title: "Netflix Klonas",
             description:
               "Netflix klonas, papildytas realaus pasaulio filmų duomenų API. Naudojant Firebase autentifikavimui ir galinėms operacijoms, šis projektas užtikrina įtraukiančią naudotojo patirtį, sujungdamas vientisą dizainą su dinamišku turiniu, gaunamu iš tikrų filmų duomenų bazių.",
             responsiveText: "Visiems įrenginiams",
           },
-          3: {
+          4: {
             title: "Dariukyy Fast Pizza",
             description:
               "Dinaminė picų užsakymo programa, kurioje naudojami tiesioginiai picų duomenys iš API. Išnagrinėkite vientisą naudotojo sąsają, demonstruojančia žinias apie priekinės dalies kūrimą ir vartotojo sąsajos dizainą. Šiuolaikinės žiniatinklio technologijos ir realaus laiko duomenų integracija.",
             responsiveText: "Visiems įrenginiams",
           },
-          4: {
+          5: {
             title: "Fitneso programa",
             description:
               "Šiuolaikinė fitneso programėlė su React, TypeScript, Tailwind CSS ir Framer Motion, skirta įspūdingoms animacijoms. Pasinerkite į įtraukiančią naudotojo patirtį su sklandžiais perėjimais ir dinamiškais vartotojo sąsajos elementais, pademonstruodami priekinės dalies kūrimo ir dizaino išmanymą.",
             responsiveText: "Visiems įrenginiams",
           },
-          5: {
+          6: {
             title: "World Wise",
             description:
               "Realaus pasaulio projektas, kuriame į Leaflet žemėlapių biblioteką integruojama miestų duomenų API, kad naudotojai galėtų stebėti savo keliones registruodami aplankytus miestus. Patirkite interaktyvią žemėlapio sąsają, demonstruojancia priekinės dalies kūrimą ir API integracijos įgūdžius. Išnagrinėkite realaus pasaulio duomenis ir naudotojų įsitraukimą į šį dinamišką kelionių palydovą.",
             responsiveText: "Tik kompiuteriams",
           },
-          6: {
+          7: {
             title: "The Wild Oasis",
             description:
               "Visapusiška viešbučių valdymo programa, naudojanti Supabase galinėms operacijoms, CRUD ir autentifikavimui, sklandžiai integruoja priekinės ir galinės dalies funkcijas ir duomenimis pagrįstą vartotojo sąsajos dizainą.",
             responsiveText: "Tik kompiuteriams",
           },
-          7: {
+          8: {
             title: "Natours",
             description:
               "Naudojant Sass sukūriau akį traukiančią svetainę, pilną įspūdingų animacijų. Pasinerkite į vizualiai stulbinančią patirtį, kai animacijos atgaivina turinį, pademonstruodamos kūrybiškumą ir žinias apie priekinės dalies kūrimą. Ištirkite Sass galią, kad supaprastintumėte stilių ir sukurtumėte dinamišką žiniatinklio patirtį",
