@@ -2,7 +2,7 @@
 
 ## Welcome to my web development portfolio!
 
-This project serves as both a showcase of my skills and a practice exercise to consolidate my knowledge in web development technologies. The primary goal is to attract the attention of potential employers and demonstrate my capabilities as a developer..
+This project serves as both a showcase of my skills and a practice exercise to consolidate my knowledge in web development technologies. The primary goal is to attract the attention of potential employers and demonstrate my capabilities as a developer.
 
 ## Overview
 

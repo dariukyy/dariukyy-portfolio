@@ -20,6 +20,10 @@ const ProjectBox = styled(motion.li)`
   box-shadow: var(--shadow-md);
   overflow: hidden;
 
+  &:last-child {
+    margin-bottom: 3rem;
+  }
+
   @media (max-width: 883px) {
     padding: 1rem 1.8rem 1.8rem 1.8rem;
   }
