@@ -9,8 +9,7 @@ import TheWildOasisImg from "/images/the-wild-oasis-app.jpeg";
 import FastReactPizzaImg from "/images/fast-react-pizza-app.jpeg";
 import WorldWiseImg from "/images/world-wise-app.jpeg";
 import WeatherImg from "/images/weather-app.jpeg";
-import reactTableProjectImage from '/images/react-table.jpeg'
-
+import reactTableProjectImage from "/images/react-table.jpeg";
 
 type ResponsiveProps = { isResponsive: boolean; responsiveText: string };
 
@@ -30,24 +29,19 @@ type PronectsDataProps = Project[];
 
 export const projectsData: PronectsDataProps = [
   {
-    id: 8,
+    id: 1,
     title: "Employee table",
     alt: "Employee table Website ScreenShoot",
     description:
-    "An employee management system that tracks employee login status and the validity of their certifications. This system ensures that all employees are up-to-date with their required credentials and provides real-time updates on their activity, enhancing overall workforce management and compliance.",
-    tags: [
-      "React",
-      "TypeScript",
-      "styled-components",
-      "Framer Motion",
-    ],
+      "An employee management system that tracks employee login status and the validity of their certifications. This system ensures that all employees are up-to-date with their required credentials and provides real-time updates on their activity, enhancing overall workforce management and compliance.",
+    tags: ["React", "TypeScript", "styled-components", "Framer Motion"],
     image: reactTableProjectImage,
     livePreview: "https://dariukyy-homework.vercel.app",
     codePreview: "https://github.com/dariukyy/home-assignment",
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 1,
+    id: 2,
     title: "Dariukyy Weather App",
     alt: "Weather App Website ScreenShoot",
     description:
@@ -68,7 +62,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 2,
+    id: 3,
     title: "Netflix Clone",
     alt: "Netflix Copy Website ScreenShoot",
     description:
@@ -80,7 +74,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 3,
+    id: 4,
     title: "Dariukyy Fast Pizza",
     alt: "Fast Pizza App Website ScreenShoot",
     description:
@@ -92,7 +86,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 4,
+    id: 5,
     title: "Fitness App",
     alt: "Fitness App Website ScreenShoot",
     description:
@@ -104,7 +98,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: true, responsiveText: "Responsive" },
   },
   {
-    id: 5,
+    id: 6,
     title: "World Wise",
     alt: "World Wise App Website ScreenShoot",
     description:
@@ -116,7 +110,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 6,
+    id: 7,
     title: "The Wild Oasis",
     alt: "The Wild Oasis Website ScreenShoot",
     description:
@@ -136,7 +130,7 @@ export const projectsData: PronectsDataProps = [
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
   {
-    id: 7,
+    id: 8,
     title: "Natours",
     alt: "Natours Website ScreenShoot",
     description:
