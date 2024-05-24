@@ -7,7 +7,7 @@ const rotation = keyframes`
 `;
 
 const Spinner = styled.div`
-  width: 5.5rem;
+  width: 5.49rem;
   aspect-ratio: 1;
   --_c: no-repeat
     radial-gradient(farthest-side, var(--color-brand-500) 92%, #0000);
