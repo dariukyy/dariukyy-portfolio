@@ -26,7 +26,7 @@ i18n.use(initReactI18next).init({
         "scroll-down": "Scroll Down",
 
         "home-description":
-          "I'm a junior frontend developer with a year and a half of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React and TypeScript",
+          "I'm a junior frontend developer with a two year of self-taught experience. I'm passionate about learning and building innovative solutions. I specialize in technologies like React, Next.js and TypeScript",
         "home-contact-me": "Contact Me",
         "about-about-me": "About Me",
         "about-personal-bio": "Personal Bio",
@@ -43,7 +43,7 @@ i18n.use(initReactI18next).init({
           0: {
             title: "The Wild Oasis / Customers",
             description:
-              "Full-stack application allows users to search for and book cabins seamlessly. It leverages Supabase for both the API and database management, ensuring efficient data handling and robust backend functionality. User authentication is handled via Google. This project is designed for customers, with data synchronized with the Wild Oasis application for employers, ensuring smooth operations and up-to-date information across platforms.",
+              "This full-stack application allows users to search for and book cabins. Using Supabase for the API and database, and Google for authentication, it ensures secure and efficient operations. Designed for customers, it synchronizes data with the Wild Oasis app for employers, ensuring smooth and up-to-date information sharing.",
             responsiveText: "Only Desktop",
           },
           1: {
@@ -121,7 +121,7 @@ i18n.use(initReactI18next).init({
 
         "home-my-name-is": "Mano vardas yra,",
         "home-description":
-          "Esu jaunesnysis frontend kūrėjas, turintis pusantrų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React ir TypeScript",
+          "Esu jaunesnysis frontend kūrėjas, turintis dviejų metų savarankiško darbo patirties. Aistringai mokausi ir kuriu novatoriškus sprendimus. Specializuojuosi tokiose technologijose kaip React, Next.js ir TypeScript",
         "home-contact-me": "Bendradarbiaukime",
         "about-about-me": "Apie mane",
         "about-personal-bio": "Biografija",
@@ -138,7 +138,7 @@ i18n.use(initReactI18next).init({
           0: {
             title: "The Wild Oasis / Klientai",
             description:
-              "Full-stack projektas leidžia naudotojams ieškoti ir rezervuoti kabinas. Ji naudoja Supabase tiek API, tiek duomenų bazių valdymui, užtikrinant efektyvų duomenų tvarkymą ir patikimą backend'o dalies funkcionalumą. Naudotojų autentifikacija vykdoma per Google. Šis projektas skirtas klientams, duomenys sinchronizuojami su „Wild Oasis“ darbuotojų programėle, užtikrinant sklandų veikimą ir naujausią informaciją visose platformose.",
+              "Ši full-stack aplikacija leidžia naudotojams ieškoti ir rezervuoti kabinas. Naudojant Supabase API ir duomenų bazę, ir „Google“ autentifikavimui, ji užtikrina saugias ir efektyvias operacijas. Sukurta klientams, ji sinchronizuoja duomenis su „Wild Oasis“ aplikacija darbdaviams, užtikrinant sklandų ir naujausią informacijos dalijimąsi.",
             responsiveText: "Tik kompiuteriams",
           },
           1: {

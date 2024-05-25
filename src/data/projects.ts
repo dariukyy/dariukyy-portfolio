@@ -34,7 +34,7 @@ export const projectsData: PronectsDataProps = [
     title: "The Wild Oasis / Customers",
     alt: "The Wild Oasis / Customers Website ScreenShoot",
     description:
-      "This full-stack application allows users to search for and book cabins seamlessly. It leverages Supabase for both the API and database management, ensuring efficient data handling and robust backend functionality. User authentication is handled via Google, providing a secure and convenient login experience. This project is designed for customers, with data synchronized with the Wild Oasis application for employers, ensuring smooth operations and up-to-date information across platforms. The intuitive interface and reliable infrastructure make it easy for users to find and reserve their perfect getaway.",
+      "This full-stack application allows users to search for and book cabins. Using Supabase for the API and database, and Google for authentication, it ensures secure and efficient operations. Designed for customers, it synchronizes data with the Wild Oasis app for employers, ensuring smooth and up-to-date information sharing.",
     tags: [
       "Next.js",
       "TypeScript",
