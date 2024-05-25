@@ -11,17 +11,14 @@ import { GrGraphQl } from "react-icons/gr";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiSupabaseFill } from "react-icons/ri";
 import {
-  SiApollographql,
   SiCssmodules,
   SiFirebase,
   SiNextdotjs,
-
   SiReactquery,
   SiReactrouter,
   SiRedux,
   SiStyledcomponents,
   SiTailwindcss,
-
   SiTypescript,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -53,11 +50,6 @@ export const skills: SkillsProps = [
   { skill: "React Query", icon: SiReactquery, id: 7, color: "#ff4154" },
   { skill: "React Router", icon: SiReactrouter, id: 8, color: "#ca4245" },
   { skill: "GraphQL", icon: GrGraphQl, id: 9, color: "#E10098" },
-  {
-    skill: "Apollo Client",
-    icon: SiApollographql,
-    id: 9,
-  },
   { skill: "Git", icon: FaGitAlt, id: 11, color: "#f34f29" },
   { skill: "Github", icon: FaGithub, id: 12 },
   { skill: "Firebase", icon: SiFirebase, id: 13, color: "#ffca28" },

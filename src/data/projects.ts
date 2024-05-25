@@ -7,6 +7,7 @@ import NetflixImg from "/images/netflix-copy.jpeg";
 import NatoursImg from "/images/natours-app.jpeg";
 import TheWildOasisImg from "/images/the-wild-oasis-app.jpeg";
 import FastReactPizzaImg from "/images/fast-react-pizza-app.jpeg";
+import TheWildOasisCostumersImg from "/images/the-wild-oasis-costumers.jpeg";
 import WorldWiseImg from "/images/world-wise-app.jpeg";
 import WeatherImg from "/images/weather-app.jpeg";
 import reactTableProjectImage from "/images/react-table.jpeg";
@@ -28,6 +29,26 @@ export type Project = {
 type PronectsDataProps = Project[];
 
 export const projectsData: PronectsDataProps = [
+  {
+    id: 0,
+    title: "The Wild Oasis / Customers",
+    alt: "The Wild Oasis / Customers Website ScreenShoot",
+    description:
+      "This full-stack application allows users to search for and book cabins seamlessly. It leverages Supabase for both the API and database management, ensuring efficient data handling and robust backend functionality. User authentication is handled via Google, providing a secure and convenient login experience. This project is designed for customers, with data synchronized with the Wild Oasis application for employers, ensuring smooth operations and up-to-date information across platforms. The intuitive interface and reliable infrastructure make it easy for users to find and reserve their perfect getaway.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "NextAuth",
+      "TailwindCSS",
+      "Google",
+    ],
+    image: TheWildOasisCostumersImg,
+    livePreview: "https://dariukyy-the-wild-oasis-website-costumers.vercel.app",
+    codePreview: "https://github.com/dariukyy/the-wild-oasis-website",
+    responsive: { isResponsive: false, responsiveText: "Only Desktop" },
+  },
+
   {
     id: 1,
     title: "Employee table",

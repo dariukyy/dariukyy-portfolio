@@ -40,6 +40,12 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Message",
         "contact-send-button": "Send Message",
         projects: {
+          0: {
+            title: "The Wild Oasis / Customers",
+            description:
+              "Full-stack application allows users to search for and book cabins seamlessly. It leverages Supabase for both the API and database management, ensuring efficient data handling and robust backend functionality. User authentication is handled via Google. This project is designed for customers, with data synchronized with the Wild Oasis application for employers, ensuring smooth operations and up-to-date information across platforms.",
+            responsiveText: "Only Desktop",
+          },
           1: {
             title: "Employee table",
             description:
@@ -129,6 +135,12 @@ i18n.use(initReactI18next).init({
         "contact-message-input-placeholder": "Žinutė",
         "contact-send-button": "Siųsti žinutę",
         projects: {
+          0: {
+            title: "The Wild Oasis / Klientai",
+            description:
+              "Full-stack projektas leidžia naudotojams ieškoti ir rezervuoti kabinas. Ji naudoja Supabase tiek API, tiek duomenų bazių valdymui, užtikrinant efektyvų duomenų tvarkymą ir patikimą backend'o dalies funkcionalumą. Naudotojų autentifikacija vykdoma per Google. Šis projektas skirtas klientams, duomenys sinchronizuojami su „Wild Oasis“ darbuotojų programėle, užtikrinant sklandų veikimą ir naujausią informaciją visose platformose.",
+            responsiveText: "Tik kompiuteriams",
+          },
           1: {
             title: "Darbuotojų lentelė",
             description:
