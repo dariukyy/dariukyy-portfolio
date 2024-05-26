@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { device } from "../utils/breakpoints";
 import ProjectsContainer from "../scenes/projects/Projects";
+import { device } from "../utils/breakpoints";
 
-import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ScrollDownIcon from "../scenes/projects/ScrollDownIcon";
+import ProgressBar from "../ui/ProgressBar";
+import ScrollToTop from "../ui/ScrollToTop";
 
 const ScrollComponent = styled.div`
   width: 100%;
@@ -51,19 +54,31 @@ const Header = styled(motion.div)`
 
 function Projects() {
   const { t } = useTranslation();
+  const [scrollPercentage, setScrollPercentage] = useState<number>(0);
+
   return (
-    <ScrollComponent>
-      <StyledProjects>
-        <Header
-          initial={{ y: -100, opacity: 1 }}
-          animate={{ y: 0, opacity: 1 }}
-        >
-          <h1>{t("Projects")}</h1>
-          <ScrollDownIcon />
-        </Header>
-        <ProjectsContainer />
-      </StyledProjects>
-    </ScrollComponent>
+    <>
+      <ProgressBar
+        setScrollPercentage={setScrollPercentage}
+        scrollPercentage={scrollPercentage}
+      />
+      <ScrollComponent className="ScrollComponent">
+        <StyledProjects>
+          <Header
+            initial={{ y: -100, opacity: 1 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <h1>{t("Projects")}</h1>
+            <ScrollDownIcon />
+          </Header>
+          <ProjectsContainer />
+        </StyledProjects>
+
+        <AnimatePresence>
+          {scrollPercentage > 10 && <ScrollToTop />}
+        </AnimatePresence>
+      </ScrollComponent>
+    </>
   );
 }
 
