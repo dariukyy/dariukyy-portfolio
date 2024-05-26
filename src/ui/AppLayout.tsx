@@ -1,9 +1,9 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import Container from "./Container";
-import SideBar from "../scenes/nav/SideBar";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { Suspense } from "react";
+import SideBar from "../scenes/nav/SideBar";
+import Container from "./Container";
 import FullPageSpinner from "./FullPageSpinner";
 
 const StyledAppLayout = styled.div<{ $sideBarWidth: number }>`
@@ -14,7 +14,6 @@ const StyledAppLayout = styled.div<{ $sideBarWidth: number }>`
     "sidebar outlet";
   height: 100vh;
   width: 100%;
-  overflow: hidden;
 `;
 
 const StyledSideBar = styled.aside`
