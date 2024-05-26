@@ -16,8 +16,9 @@ const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   position: relative;
+  overflow-y: auto;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -71,7 +72,7 @@ function Container({ children }: ContainerProps) {
   const initialPositionForBubbles = { x: 0, y: 0 };
 
   return (
-    <StyledContainer $isProjectSection={$isProjectSection}>
+    <StyledContainer className="main" $isProjectSection={$isProjectSection}>
       <Bubble1
         initial={initialPositionForBubbles}
         animate={getFinalPositions(path)?.finalPositionForBubble1}
