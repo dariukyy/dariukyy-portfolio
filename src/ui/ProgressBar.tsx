@@ -29,7 +29,7 @@ function ProgressBar({
         scrollContainer.removeEventListener("scroll", handleScroll);
       }
     };
-  }, []);
+  }, [setScrollPercentage]);
 
   return (
     <div
