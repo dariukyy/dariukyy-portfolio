@@ -36,7 +36,7 @@ function ProgressBar({
       id="progress-container"
       style={{
         zIndex: 100,
-        height: "6px",
+        height: "5px",
         width: "100%",
         backgroundColor: "transparent",
         position: "fixed",
