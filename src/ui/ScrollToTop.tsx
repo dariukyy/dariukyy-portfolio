@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { TiArrowSortedUp } from "react-icons/ti";
 import styled from "styled-components";
@@ -43,7 +43,7 @@ function ScrollToTop() {
     setIsMounted(false);
   }
   return (
-    <AnimatePresence>
+    <>
       {isMounted && (
         <ScrollUpButton
           onClick={handleScrollToTop}
@@ -57,7 +57,7 @@ function ScrollToTop() {
           <TiArrowSortedUp />
         </ScrollUpButton>
       )}
-    </AnimatePresence>
+    </>
   );
 }
 
