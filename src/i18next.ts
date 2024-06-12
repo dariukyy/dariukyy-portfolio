@@ -186,7 +186,7 @@ i18n.use(initReactI18next).init({
           8: {
             title: "Natours",
             description:
-              "Naudojant Sass sukūriau akį traukiančią svetainę, pilną įspūdingų animacijų. Pasinerkite į vizualiai stulbinančią patirtį, kai animacijos atgaivina turinį, pademonstruodamos kūrybiškumą ir žinias apie priekinės dalies kūrimą. Ištirkite Sass galią, kad supaprastintumėte stilių ir sukurtumėte dinamišką žiniatinklio patirtį",
+              "Naudojant Sass sukūriau akį traukiančią svetainę, turinčią pilną įspūdingų animacijų. Pasinerkite į vizualiai stulbinančią patirtį, kai animacijos atgaivina turinį, pademonstruodamos kūrybiškumą ir žinias apie priekinės dalies kūrimą. Ištirkite Sass galią, kad supaprastintumėte stilių ir sukurtumėte dinamišką žiniatinklio patirtį",
             responsiveText: "Visiems įrenginiams",
           },
         },
