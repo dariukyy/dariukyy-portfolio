@@ -18,7 +18,7 @@ const StyledContainer = styled.main<{ $isProjectSection: boolean }>`
   align-items: center;
   /* padding: 1.5rem; */
   position: relative;
-  overflow-y: auto;
+  overflow: hidden;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
