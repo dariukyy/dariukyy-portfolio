@@ -1,4 +1,5 @@
 import i18n from "i18next";
+import { title } from "process";
 import { initReactI18next } from "react-i18next";
 
 i18n.use(initReactI18next).init({
@@ -41,54 +42,60 @@ i18n.use(initReactI18next).init({
         "contact-send-button": "Send Message",
         projects: {
           0: {
+            title: "AI Chat Agent",
+            description:
+              "A cutting-edge customisabe AI Chat Agent that helps you manage your customer conversations. This project delivers a seamless user experience with dynamic chat features and advanced AI capabilities. Explore the future of customer service with this innovative chat agent.",
+            responsiveText: "Responsive",
+          },
+          1: {
             title: "The Wild Oasis / Customers",
             description:
               "This full-stack application allows users to search for and book cabins. Using Supabase for the API and database, and Google for authentication, it ensures secure and efficient operations. Designed for customers and it synchronizes data with the Wild Oasis app for employers, ensuring smooth and up-to-date information sharing.",
             responsiveText: "Only Desktop",
           },
-          1: {
+          2: {
             title: "Employee table",
             description:
               "An employee management system that tracks the login status of employees and the validity of their credentials. This system ensures that all employees receive the necessary certifications with real-time information, improving overall workforce management and compliance.",
             responsiveText: "Only Desktop",
           },
-          2: {
+          3: {
             title: "Dariukyy Weather App",
             description:
               "Revolutionize your weather experience. Powered by Next.js, TypeScript, TailwindCSS, and cutting-edge technologies like Tremor and StepZen, it delivers hyper-personalized forecasts. Using GraphQL and Apollo Client for lightning-fast performance, alongside OpenAI API for advanced AI insights.",
             responsiveText: "Responsive",
           },
-          3: {
+          4: {
             title: "Netflix Clone",
             description:
               "A Netflix clone, enhanced with real-world movie data API. Utilizing Firebase for authentication and backend operations, this project delivers an immersive user experience, blending seamless design with dynamic content sourced from real movie databases.",
             responsiveText: "Responsive",
           },
-          4: {
+          5: {
             title: "Dariukyy Fast Pizza",
             description:
               "A dynamic pizza ordering app using live pizza data from the API. Explore a seamless user interface, showcasing expertise in frontend development and UI design. Modern web technologies and real-time data integration.",
             responsiveText: "Responsive",
           },
-          5: {
+          6: {
             title: "Fitness App",
             description:
               "A modern fitness app with React, TypeScript, Tailwind CSS, and Framer Motion for captivating animations. Dive into an immersive user experience with fluid transitions and dynamic UI elements, showcasing proficiency in frontend development and design.",
             responsiveText: "Responsive",
           },
-          6: {
+          7: {
             title: "World Wise",
             description:
               "A real-world project integrating city data API into a Leaflet map library, enabling users to track their travels by registering visited cities. Experience interactive map interface, demonstrating proficiency in frontend development and API integration. Explore the real-world data and user engagement in this dynamic travel companion.",
             responsiveText: "Only Desktop",
           },
-          7: {
+          8: {
             title: "The Wild Oasis",
             description:
               "A full-stack hotel management application, leveraging Supabase for backend operations, CRUD, and authentication, seamlessly integrates frontend and backend functionalities and data-driven UI design.",
             responsiveText: "Only Desktop",
           },
-          8: {
+          9: {
             title: "Natours",
             description:
               "Designed an eye-catching website filled with captivating animations using Sass. Immerse yourself in a visually stunning experience as animations bring content to life, showcasing creativity and expertise in frontend development. Explore the power of Sass to streamline styling and create dynamic web experiences",
@@ -136,54 +143,60 @@ i18n.use(initReactI18next).init({
         "contact-send-button": "Siųsti žinutę",
         projects: {
           0: {
+            title: "AI Chat Agentas",
+            description:
+              "Pažangiausias pritaikytas dirbtinio intelekto pokalbių agentas, padedantis valdyti klientų pokalbius. Šis projektas užtikrina sklandžią vartotojo patirtį su dinamiškomis pokalbių funkcijomis ir pažangiomis AI galimybėmis. Naršykite klientų aptarnavimo ateitį su šiuo naujovišku pokalbių agentu.",
+            responsiveText: "Visiems įrenginiams",
+          },
+          1: {
             title: "The Wild Oasis / Klientai",
             description:
               "Ši full-stack aplikacija leidžia naudotojams ieškoti ir rezervuoti kabinas. Naudojant Supabase API ir duomenų bazę, ir „Google“ autentifikavimui, ji užtikrina saugias ir efektyvias operacijas. Sukurta klientams, ji sinchronizuoja duomenis su „Wild Oasis“ aplikacija darbdaviams, užtikrinant sklandų ir naujausią informacijos dalijimąsi.",
             responsiveText: "Tik kompiuteriams",
           },
-          1: {
+          2: {
             title: "Darbuotojų lentelė",
             description:
               "Darbuotojų valdymo sistemą, kuri seka darbuotojų prisijungimo būseną ir jų pažymų galiojimą. Ši sistema užtikrina, kad visi darbuotojai gautų reikiamas pažymas realiuoju laiku pateikta informacija, pagerindama bendrą darbo jėgos valdymą ir atitikimą.",
             responsiveText: "Tik kompiuteriams",
           },
-          2: {
+          3: {
             title: "Dariukyy Orų Svetainė",
             description:
               "Pakeiskite orų patirtį. Naudojant Next.js, TypeScript, TailwindCSS ir pažangiausias technologijas, pvz., „Tremor“ ir „StepZen“, jis teikia itin suasmenintas prognozes. Naudojant GraphQL ir Apollo Client žaibiškam veikimui, kartu su OpenAI API pažangioms AI įžvalgoms.",
             responsiveText: "Visiems įrenginiams",
           },
-          3: {
+          4: {
             title: "Netflix Klonas",
             description:
               "Netflix klonas, papildytas realaus pasaulio filmų duomenų API. Naudojant Firebase autentifikavimui ir galinėms operacijoms, šis projektas užtikrina įtraukiančią naudotojo patirtį, sujungdamas vientisą dizainą su dinamišku turiniu, gaunamu iš tikrų filmų duomenų bazių.",
             responsiveText: "Visiems įrenginiams",
           },
-          4: {
+          5: {
             title: "Dariukyy Fast Pizza",
             description:
               "Dinaminė picų užsakymo programa, kurioje naudojami tiesioginiai picų duomenys iš API. Išnagrinėkite vientisą naudotojo sąsają, demonstruojančia žinias apie priekinės dalies kūrimą ir vartotojo sąsajos dizainą. Šiuolaikinės žiniatinklio technologijos ir realaus laiko duomenų integracija.",
             responsiveText: "Visiems įrenginiams",
           },
-          5: {
+          6: {
             title: "Fitneso programa",
             description:
               "Šiuolaikinė fitneso programėlė su React, TypeScript, Tailwind CSS ir Framer Motion, skirta įspūdingoms animacijoms. Pasinerkite į įtraukiančią naudotojo patirtį su sklandžiais perėjimais ir dinamiškais vartotojo sąsajos elementais, pademonstruodami priekinės dalies kūrimo ir dizaino išmanymą.",
             responsiveText: "Visiems įrenginiams",
           },
-          6: {
+          7: {
             title: "World Wise",
             description:
               "Realaus pasaulio projektas, kuriame į Leaflet žemėlapių biblioteką integruojama miestų duomenų API, kad naudotojai galėtų stebėti savo keliones registruodami aplankytus miestus. Patirkite interaktyvią žemėlapio sąsają, demonstruojancia priekinės dalies kūrimą ir API integracijos įgūdžius. Išnagrinėkite realaus pasaulio duomenis ir naudotojų įsitraukimą į šį dinamišką kelionių palydovą.",
             responsiveText: "Tik kompiuteriams",
           },
-          7: {
+          8: {
             title: "The Wild Oasis",
             description:
               "Visapusiška viešbučių valdymo programa, naudojanti Supabase galinėms operacijoms, CRUD ir autentifikavimui, sklandžiai integruoja priekinės ir galinės dalies funkcijas ir duomenimis pagrįstą vartotojo sąsajos dizainą.",
             responsiveText: "Tik kompiuteriams",
           },
-          8: {
+          9: {
             title: "Natours",
             description:
               "Naudojant Sass sukūriau akį traukiančią svetainę, turinčią pilną įspūdingų animacijų. Pasinerkite į vizualiai stulbinančią patirtį, kai animacijos atgaivina turinį, pademonstruodamos kūrybiškumą ir žinias apie priekinės dalies kūrimą. Ištirkite Sass galią, kad supaprastintumėte stilių ir sukurtumėte dinamišką žiniatinklio patirtį",
