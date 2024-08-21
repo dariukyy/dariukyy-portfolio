@@ -57,7 +57,7 @@ export const projectsData: PronectsDataProps = [
       "An employee management system that tracks employee login status and the validity of their certifications. This system ensures that all employees are up-to-date with their required credentials and provides real-time updates on their activity, enhancing overall workforce management and compliance.",
     tags: ["React", "TypeScript", "styled-components", "Framer Motion"],
     image: reactTableProjectImage,
-    livePreview: "home-assignment-woad.vercel.app",
+    livePreview: "https://home-assignment-woad.vercel.app",
     codePreview: "https://github.com/dariukyy/home-assignment",
     responsive: { isResponsive: false, responsiveText: "Only Desktop" },
   },
