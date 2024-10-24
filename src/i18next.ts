@@ -49,7 +49,7 @@ i18n.use(initReactI18next).init({
           1: {
             title: "The Wild Oasis / Customers",
             description:
-              "This full-stack application allows users to search for and book cabins. Using Supabase for the API and database, and Google for authentication, it ensures secure and efficient operations. Designed for customers and it synchronizes data with the Wild Oasis app for employers, ensuring smooth and up-to-date information sharing.",
+              "This full stack application allows users to search for and book cabins. Using Supabase for the API and database, and Google for authentication, it ensures secure and efficient operations. Designed for customers and it synchronizes data with the Wild Oasis app for employers, ensuring smooth and up-to-date information sharing.",
             responsiveText: "Only Desktop",
           },
           2: {
